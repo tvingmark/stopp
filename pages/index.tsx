@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react' 
 import Layout, { siteTitle } from '../components/layout'
+import Map from '../components/map'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
@@ -15,34 +17,40 @@ export default function Home({
     id: string
   }[]
 }) {
+    const [isLoading, setLoading] = useState<boolean>(false);
+    useEffect(() => {
+      let timer = setTimeout(() => setLoading(true), 1 * 1000);
+
+      // this will clear Timeout
+      // when component unmount like in willComponentUnmount
+      // and show will not change to true
+      return () => {
+        clearTimeout(timer);
+      };
+    }, []);
+    console.log(isLoading)
+  if(!isLoading){
+      return (
+          <Layout home>
+            <Head>
+                <title>{siteTitle}</title>
+            </Head>
+          </Layout>
+      )
+  }
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Believer in a fair world.</p>
-        <blockquote>
-            I will talk about education, tecknology, quantum computing and
-            sustainability.
-        </blockquote>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Map>
+      </Map>
+      <Map>
+      </Map>
+      <Map>
+      </Map>
+      <Map>
+      </Map>      
     </Layout>
   )
 }

@@ -15,21 +15,21 @@ export default function Layout({
  home?: boolean   
 }) {
   return (
-    <>
+    <div className="relative flex flex-col flex-1 w-full overflow-hidden bg-white shadow sm:max-w-xl mx-auto">
       <nav className="relative z-10 flex-none py-3 pl-5 pr-3 sm:pl-6 sm:pr-4 md:pr-3.5 lg:px-6 flex items-center space-x-4">
             <Image
               priority
               src="/images/egg_profile.png"
-              className={utilStyles.borderCircle}
+              className="rounded-full"
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="font-bold text-3xl">{name}</h1>
       </nav>
       <main className=" bg-red-300 flex-grow p-5">
           {children}
       </main>
-    </>
+    </div>
   )
 }
