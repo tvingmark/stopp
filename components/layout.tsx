@@ -15,7 +15,7 @@ export default function Layout({
  home?: boolean   
 }) {
   return (
-    <>
+    <div className="relative flex-1 flex flex-col sm:max-w-xl sm:mx-auto">
       <nav className="relative z-10 flex-none py-3 pl-5 pr-3 sm:pl-6 sm:pr-4 md:pr-3.5 lg:px-6 flex items-center space-x-4">
             <Image
               priority
@@ -30,6 +30,6 @@ export default function Layout({
       <main className=" bg-red-300 flex-grow p-5">
           {children}
       </main>
-    </>
+    </div>
   )
 }
