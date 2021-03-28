@@ -28,7 +28,7 @@ export default class extends Document {
           <link rel='shortcut icon' href='/favicon.ico' />
 
         </Head>
-        <body className="fixed overflow-hidden w-full min-h-full flex text-gray-900 bg-gray-100 dark:text-white bg-white dark:bg-gray-900 h-">
+        <body className="fixed overflow-hidden w-full min-h-full flex text-gray-900 dark:text-white bg-white dark:bg-gray-900 h-">
           <Main />
           <NextScript />
           <style jsx global>{`
