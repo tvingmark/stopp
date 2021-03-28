@@ -20,7 +20,7 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className="h-full overscroll-y-auto">
         <h1 className="text-2xl font-extrabold">{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
