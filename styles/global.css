@@ -8,6 +8,13 @@ body {
   font-size: 18px;
 }
 
+#__next {
+    width: 100%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+}
+
 * {
   box-sizing: border-box;
 }

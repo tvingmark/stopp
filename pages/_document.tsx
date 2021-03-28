@@ -22,22 +22,11 @@ export default class MyDocument extends Document {
           
           <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
           <link rel='manifest' href='/manifest.json' />
-          <link rel='shortcut icon' href='/favicon.ico' />
-
+          <link rel='shortcut icon' href='/favicon.ico' /> 
         </Head>
         <body className="fixed overflow-hidden w-full min-h-full flex text-gray-900 dark:text-white bg-white dark:bg-gray-900 h-">
           <Main />
           <NextScript />
-          <style jsx global>{`
-            /* Other global styles such as 'html, body' etc... */
-
-            #__next {
-                width: 100%;
-                flex: none;
-                display: flex;
-                flex-direction: column;
-            }
-          `}</style>          
         </body>
       </Html>
     )
