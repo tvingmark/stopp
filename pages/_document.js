@@ -10,7 +10,7 @@ export default class extends Document {
 
   render() {
     return (
-      <Html lang='en' dir='ltr'>
+      <Html lang="en" className="fixed overflow-hidden h-full">
         <Head>
           <meta name='application-name' content={APP_NAME} />
           <meta name='apple-mobile-web-app-capable' content='yes' />
@@ -26,21 +26,9 @@ export default class extends Document {
           <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
           <link rel='manifest' href='/manifest.json' />
           <link rel='shortcut icon' href='/favicon.ico' />
-          <style>{
-            `
-            html, body, #__next {
-              height: 100%;
-            }
-            #__next {
-              margin: 0 auto;
-            }
-            h1 {
-              text-align: center;
-            }
-            `
-          }</style>
+
         </Head>
-        <body>
+        <body className="fixed overflow-hidden w-full min-h-full flex text-gray-900 dark:text-white bg-white dark:bg-gray-900 h-">
           <Main />
           <NextScript />
         </body>
