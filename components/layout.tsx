@@ -27,7 +27,7 @@ export default function Layout({
             />
             <h1 className="font-bold text-3xl">{name}</h1>
       </nav>
-      <main className=" bg-red-300 flex-grow p-5">
+      <main className="flex-grow p-5">
           {children}
       </main>
     </div>
