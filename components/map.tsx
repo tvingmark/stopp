@@ -7,7 +7,7 @@ export default function Map({
  home?: boolean   
 }) {
   return (
-    <div className="relative w-full h-2/3">
+    <div className="relative w-full h-52">
         <Here />
     </div>
   )
