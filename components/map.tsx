@@ -1,4 +1,5 @@
-import Here from './here'
+// import Here from './here'
+import MapLibre from './maplibre'
 export default function Map({
     children,
     home 
@@ -8,7 +9,7 @@ export default function Map({
 }) {
   return (
     <div className="relative w-full h-52">
-        <Here />
+        <MapLibre />
     </div>
   )
 }
