@@ -28,7 +28,6 @@ export default function Home({
         clearTimeout(timer);
       };
     }, []);
-    console.log(isLoading)
   if(!isLoading){
       return (
           <Layout home>

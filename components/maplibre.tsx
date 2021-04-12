@@ -1,7 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
+import { start } from 'node:repl';
 
 
+interface location {
+	lat: number,
+	lng: number,
+	zoom: number
+}
 
 export default function MapLibre({
     children
@@ -10,9 +16,9 @@ export default function MapLibre({
 }) {
 
 	const mapContainer = useRef();
-	const [lng, setLng] = useState(-21.928248);
-	const [lat, setLat] = useState(64.145541);
-	const [zoom, setZoom] = useState(9);
+	const [lng, setLng] = useState(-21.9204);
+	const [lat, setLat] = useState(64.1448);
+	const [zoom, setZoom] = useState(14);
 
 	useEffect(() => {
 		const map = new maplibregl.Map({
