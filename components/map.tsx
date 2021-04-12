@@ -8,18 +8,24 @@ export default function Map({
  children: React.ReactNode
  home?: boolean   
 }) {
+
+
+  let myHome = {
+    lat: 64.1448,
+    lng: -21.9204,
+    zoom: 14.2
+  }
+
   return (
   <>
     <div className="relative w-full h-52">
         <MapLibre 
-          home={{
-            lat: 64.1448,
-            lng: -21.9204,
-            zoom: 14
-          }}
+          home={myHome}
         />
     </div>
-    <Remote />
+    <div className="my-3">
+      <Remote />
+    </div>
   </>
   )
 }

@@ -25,7 +25,7 @@ export default function MapLibre({
 	useEffect(() => {
 		const map = new maplibregl.Map({
 			container: mapContainer.current,
-			style: 'https://api.maptiler.com/maps/streets/style.json?key=I5JyAqVoKa0bzAa97qBl',
+			style: 'https://api.maptiler.com/maps/pastel/style.json?key=I5JyAqVoKa0bzAa97qBl',
 			center: [lng, lat],
 			zoom: zoom
 		})

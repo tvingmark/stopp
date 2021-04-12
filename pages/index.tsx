@@ -19,7 +19,7 @@ export default function Home({
 }) {
     const [isLoading, setLoading] = useState<boolean>(false);
     useEffect(() => {
-      let timer = setTimeout(() => setLoading(true), 1 * 1000);
+      let timer = setTimeout(() => setLoading(true), 1 * 300);
 
       // this will clear Timeout
       // when component unmount like in willComponentUnmount
@@ -41,22 +41,6 @@ export default function Home({
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <script
-            type="text/javascript"
-            src="https://js.api.here.com/v3/3.1/mapsjs-core.js">
-        </script>
-        <script
-            type="text/javascript"
-            src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"
-        ></script>
       </Head>
       <Map>
       </Map> 
