@@ -10,30 +10,37 @@ interface location {
 }
 
 export default function MapLibre({
-    children
+    children,
+		home
 }: {
 	children?: React.ReactNode
+	home: location
 }) {
 
-	const mapContainer = useRef();
-	const [lng, setLng] = useState(-21.9204);
-	const [lat, setLat] = useState(64.1448);
-	const [zoom, setZoom] = useState(14);
+	const mapContainer = useRef()
+	const [lng, setLng] = useState(home.lng)
+	const [lat, setLat] = useState(home.lat)
+	const [zoom, setZoom] = useState(home.zoom)
 
 	useEffect(() => {
 		const map = new maplibregl.Map({
 			container: mapContainer.current,
-			style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+			style: 'https://api.maptiler.com/maps/streets/style.json?key=I5JyAqVoKa0bzAa97qBl',
 			center: [lng, lat],
 			zoom: zoom
 		})
+
+		const marker = new maplibregl.Marker()
+			.setLngLat([home.lng, home.lat])
+			.addTo(map);
+		
 		return () => map.remove()
 	}, [])
 	return (
 		<div 
 			className="h-full w-full map overflow-hidden rounded-xl" 
 			id="map"
-			ref={mapContainer}>Effect</div>
+			ref={mapContainer}>loading</div>
 	)
 }
 
