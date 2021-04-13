@@ -18,7 +18,7 @@ export default function Map({
 
   return (
   <>
-    <div className="relative w-full h-52">
+    <div className="relative w-full h-52 sm:h-64">
         <MapLibre 
           home={myHome}
         />

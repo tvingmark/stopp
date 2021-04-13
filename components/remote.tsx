@@ -30,13 +30,6 @@ const Button: React.FC<ButtonProps> = ({children, inverse}) => {
 	}
 }
 
-
-// height: 45px;
-// 	width: 45px;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;">
-
 export default function Remote({
 	children
 }: {
