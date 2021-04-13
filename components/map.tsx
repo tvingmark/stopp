@@ -1,6 +1,7 @@
 // import Here from './here'
 import MapLibre from './maplibre'
 import Remote from './remote'
+import WW from './ww'
 export default function Map({
     children,
     home 
@@ -8,7 +9,6 @@ export default function Map({
  children: React.ReactNode
  home?: boolean   
 }) {
-
 
   let myHome = {
     lat: 64.1448,
@@ -21,11 +21,12 @@ export default function Map({
     <div className="relative w-full h-52 sm:h-64">
         <MapLibre 
           home={myHome}
-        />
+        /> 
     </div>
     <div className="my-3">
       <Remote />
     </div>
+    <WW />
   </>
   )
 }

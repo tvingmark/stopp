@@ -10,6 +10,7 @@ const WW = () => {
 
   // for comlink
   const [comlinkMessage, setComlinkMessage] = React.useState("");
+  const [windBikes, setWindBikes] = React.useState(0);
   const comlinkWorkerRef = React.useRef<Worker>();
   const comlinkWorkerApiRef = React.useRef<Comlink.Remote<WorkerApi>>();
 
@@ -24,6 +25,12 @@ const WW = () => {
     comlinkWorkerApiRef.current = Comlink.wrap<WorkerApi>(
       comlinkWorkerRef.current
     );
+
+    const msg = comlinkWorkerApiRef.current?.getName();
+    setComlinkMessage(`Number of Hopp => ${msg}`);
+    const msg1 = comlinkWorkerApiRef.current?.getWind();
+    setComlinkMessage(`Number of Wind => ${msg1}`);    
+
     return () => {
       workerRef.current?.terminate();
       comlinkWorkerRef.current?.terminate();
@@ -31,31 +38,37 @@ const WW = () => {
   }, []);
 
   const handleWork = React.useCallback(async () => {
-    workerRef.current?.postMessage(100000);
+    workerRef.current?.postMessage(1000000);
+    workerRef.current?.postMessage(1000000);
+    workerRef.current?.postMessage(1000000);
   }, []);
 
   const handleComlinkWork = async () => {
-    console.log("COMLINK");
+    console.log("HOPP COMLINK");
     const msg = await comlinkWorkerApiRef.current?.getName();
     setComlinkMessage(`Comlink response => ${msg}`);
   };
+  const handleWindWork = async () => {
+    console.log("Work COMLINK");
+    const msg = await comlinkWorkerApiRef.current?.getWind();
+    setWindBikes(msg);
+  };  
 
   return (
     <div>
-      <h1>Hello Next.js, TypeScript, Web Worker and Comlink👋</h1>
-      <div>
-        <h2>Let's use Standard Web worker!</h2>
         <button onClick={handleWork}>Calculate PI by standard worker</button>
         <p>Result: {latestMessage}</p>
-      </div>
       <div>
-        <h2>
-          Let's use <em>Comlink</em> Web worker!
-        </h2>
-        <button onClick={handleComlinkWork}>
+        <button className="bg-gradient-to-l" onClick={handleComlinkWork}>
           fetch random word by Comlink
         </button>
         <p>Result: {comlinkMessage}</p>
+      </div>
+      <div>
+        <button className="bg-gradient-to-l" onClick={handleWindWork}>
+          fetch random word by Comlink
+        </button>
+        <p>Result: {windBikes}</p>
       </div>
     </div>
   );

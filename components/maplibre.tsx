@@ -1,7 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
-import { start } from 'node:repl';
-
 
 interface location {
 	lat: number,
