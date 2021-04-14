@@ -26,7 +26,7 @@ const WW = () => {
       comlinkWorkerRef.current
     );
 
-    const msg = comlinkWorkerApiRef.current?.getName();
+    const msg = comlinkWorkerApiRef.current?.getHopp();
     setComlinkMessage(`Number of Hopp => ${msg}`);
     const msg1 = comlinkWorkerApiRef.current?.getWind();
     setComlinkMessage(`Number of Wind => ${msg1}`);    
@@ -45,7 +45,7 @@ const WW = () => {
 
   const handleComlinkWork = async () => {
     console.log("HOPP COMLINK");
-    const msg = await comlinkWorkerApiRef.current?.getName();
+    const msg = await comlinkWorkerApiRef.current?.getHopp();
     setComlinkMessage(`Comlink response => ${msg}`);
   };
   const handleWindWork = async () => {

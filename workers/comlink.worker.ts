@@ -1,14 +1,20 @@
-import { data } from "autoprefixer";
 import * as Comlink from "comlink";
 import inside from "../lib/mapUtils";
 
 export interface WorkerApi {
-  getName: typeof getName;
+  getHopp: typeof getHopp;
   getWind: typeof getWind;
 }
 
+export interface Bike {
+  lat: number;
+  lon: number;
+  batt: number;
+  id: string;
+}
+
 const workerApi: WorkerApi = {
-  getName,
+  getHopp,
   getWind,
 };
 
@@ -30,11 +36,13 @@ const LARGE = [
   [-21.939611434936523, 64.14558344421198],
 ];
 
-async function getName() {
-  console.log("Hallo getName");
-  const res = await fetch(
-    "https://3000-gold-coyote-u4ogxg7s.ws-eu03.gitpod.io/data/hopp.json"
-  );
+async function getHopp() {
+  let url = process.env.NEXT_PUBLIC_VERCEL_URL;
+  if (process.env.NODE_ENV === "development") {
+    url = "https://3000-gold-coyote-u4ogxg7s.ws-eu03.gitpod.io";
+  }
+
+  const res = await fetch(url + "/data/hopp.json");
   const json = await res.json();
   const sum = json.data.bikes.reduce(function (accumulator, bike) {
     var polygon = LARGE;
@@ -42,13 +50,17 @@ async function getName() {
       bike.hopp_battery_level > BATTERY_LEVEL &&
       inside([bike.lon, bike.lat], polygon)
     ) {
-      accumulator.push(bike);
+      const stoppBike: Bike = {
+        batt: bike.hopp_battery_level,
+        lat: bike.lat,
+        lon: bike.lon,
+        id: bike.bike_id,
+      };
+      accumulator.push(stoppBike);
     }
     return accumulator;
   }, []);
-  console.log("Hopp: ");
-  console.dir(sum);
-  return sum.length;
+  return sum;
 }
 
 async function getWind() {
