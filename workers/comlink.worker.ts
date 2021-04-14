@@ -37,10 +37,10 @@ const LARGE = [
 ];
 
 async function getHopp() {
-  let url = process.env.NEXT_PUBLIC_VERCEL_URL;
+  let url = "https://" + process.env.NEXT_PUBLIC_VERCEL_URL;
   console.log("URL: ", process.env.NEXT_PUBLIC_VERCEL_URL);
   if (process.env.NODE_ENV === "development") {
-    url = process.env.NEXT_PUBLIC_HOSTNAME;
+    url = "https://" + process.env.NEXT_PUBLIC_HOSTNAME;
   }
 
   const res = await fetch(url + "/data/hopp.json");
