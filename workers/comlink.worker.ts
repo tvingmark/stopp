@@ -38,8 +38,9 @@ const LARGE = [
 
 async function getHopp() {
   let url = process.env.NEXT_PUBLIC_VERCEL_URL;
+  console.log("URL: ", process.env.NEXT_PUBLIC_VERCEL_URL);
   if (process.env.NODE_ENV === "development") {
-    url = "https://3000-gold-coyote-u4ogxg7s.ws-eu03.gitpod.io";
+    url = process.env.NEXT_PUBLIC_HOSTNAME;
   }
 
   const res = await fetch(url + "/data/hopp.json");
