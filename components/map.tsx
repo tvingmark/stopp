@@ -16,6 +16,7 @@ export default function Map({
   home?: boolean;
 }) {
   let emptyStoppBikes: Array<Bike> = [];
+
   const [hoppMarkers, setHoppMarkers] = React.useState(emptyStoppBikes);
   const comlinkWorkerRef = React.useRef<Worker>();
   const comlinkWorkerApiRef = React.useRef<Comlink.Remote<WorkerApi>>();
@@ -43,6 +44,7 @@ export default function Map({
     lng: -21.9204,
     zoom: 14.2,
   };
+
   console.log("HoppMarkers: ", hoppMarkers.length);
   console.dir();
   return (

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import maplibregl from "maplibre-gl";
+import MapContainer from "./mapContainer";
 import { Bike } from "../workers/comlink.worker";
 
 interface location {
@@ -18,15 +19,25 @@ export default function MapLibre({
   hoppMarkers: Array<Bike>;
 }) {
   const mapContainer = useRef();
+  let map = useRef<maplibregl.Map>();
   const [mapLoaded, setMapLoaded] = useState(false);
   const [lng, setLng] = useState(home.lng);
   const [lat, setLat] = useState(home.lat);
   const [zoom, setZoom] = useState(home.zoom);
 
+  function addMarkers() {
+    console.log("Add Markers");
+    console.dir(hoppMarkers);
+    hoppMarkers.map((bike) => {
+      const marker = new maplibregl.Marker()
+        .setLngLat([bike.lon, home.lat])
+        .addTo(map.current);
+    });
+  }
+
   useEffect(() => {
-    let map: maplibregl.Map;
-    if (!mapLoaded) {
-      map = new maplibregl.Map({
+    if (!map.current?.loaded) {
+      map.current = new maplibregl.Map({
         container: mapContainer.current,
         style:
           "https://api.maptiler.com/maps/pastel/style.json?key=I5JyAqVoKa0bzAa97qBl",
@@ -35,25 +46,20 @@ export default function MapLibre({
       });
       const marker = new maplibregl.Marker()
         .setLngLat([home.lng, home.lat])
-        .addTo(map);
+        .addTo(map.current);
+    } else {
+      hoppMarkers.map((bike) => {
+        const marker = new maplibregl.Marker()
+          .setLngLat([bike.lon, bike.lat])
+          .addTo(map.current);
+      });
     }
-
-    hoppMarkers.map((bike) => {
-      const mark = new maplibregl.Marker()
-        .setLngLat([bike.lon, bike.lat])
-        .addTo(map);
-    });
-
-    return () => map.remove();
   }, [hoppMarkers]);
   return (
-    <div
-      className="h-full w-full map overflow-hidden rounded-xl"
-      id="map"
-      ref={mapContainer}
-    >
-      loading
-    </div>
+    <>
+      <MapContainer ref={mapContainer} />
+      <button onClick={addMarkers}>Test</button>
+    </>
   );
 }
 
