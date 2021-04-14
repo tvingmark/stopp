@@ -1,4 +1,4 @@
-export default function inside(point: Array<Number>, vs: Array<Array<Number>>) {
+export default function inside(point: Array<number>, vs: Array<Array<number>>) {
   // ray-casting algorithm based on
   // https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html/pnpoly.html
 
