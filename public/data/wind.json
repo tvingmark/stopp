@@ -1,0 +1,3513 @@
+{
+    "result": 0,
+    "items": [
+        {
+            "boardId": "6927fa75-5d4a-4b79-8059-e9a515e6a20a",
+            "boardType": "wind3.0",
+            "boardNo": "S0026800",
+            "lockType": "moby",
+            "lockNo": "S0026800",
+            "latitude": "64.145111",
+            "longitude": "-21.919743",
+            "currentRideId": null,
+            "vol": "59",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740402BF0"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317594,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 21.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "8f1110e9-c9d4-4a53-9b49-11a2f673f93d",
+            "boardType": "wind3.0",
+            "boardNo": "S0026805",
+            "lockType": "moby",
+            "lockNo": "S0026805",
+            "latitude": "64.1429383",
+            "longitude": "-21.9126716",
+            "currentRideId": null,
+            "vol": "36",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC974040391A"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317880,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 12.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "9512243c-e9c5-4486-b1c1-0e68e075941a",
+            "boardType": "wind3.0",
+            "boardNo": "S0026838",
+            "lockType": "moby",
+            "lockNo": "S0026838",
+            "latitude": "64.143738",
+            "longitude": "-21.927225",
+            "currentRideId": null,
+            "vol": "95",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC974040394D"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316290,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 36,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "43cf3966-3de0-49bd-9d36-4f74aa8857a2",
+            "boardType": "wind3.0",
+            "boardNo": "S0026939",
+            "lockType": "moby",
+            "lockNo": "S0026939",
+            "latitude": "64.14286",
+            "longitude": "-21.930281",
+            "currentRideId": null,
+            "vol": "41",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740402BE4"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317145,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 14.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "5ed0b77b-badc-4ca2-a127-cf2b4c3c5243",
+            "boardType": "wind3.0",
+            "boardNo": "S0034700",
+            "lockType": "moby",
+            "lockNo": "S0034700",
+            "latitude": "64.144234",
+            "longitude": "-21.920691",
+            "currentRideId": null,
+            "vol": "75",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404040FF"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317809,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 28,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "b2db2230-2498-4555-a932-27b8e31965aa",
+            "boardType": "wind3.0",
+            "boardNo": "S0034712",
+            "lockType": "moby",
+            "lockNo": "S0034712",
+            "latitude": "64.140808",
+            "longitude": "-21.925476",
+            "currentRideId": null,
+            "vol": "95",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404130"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317426,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 36,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "50feff25-20d8-4b4c-9999-8e887de4ace7",
+            "boardType": "wind3.0",
+            "boardNo": "S0034764",
+            "lockType": "moby",
+            "lockNo": "S0034764",
+            "latitude": "64.142136",
+            "longitude": "-21.918877",
+            "currentRideId": null,
+            "vol": "87",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740402AB5"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317022,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 32.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "3550ddb6-2187-47e4-be21-031aa1be7efe",
+            "boardType": "wind3.0",
+            "boardNo": "S0034774",
+            "lockType": "moby",
+            "lockNo": "S0034774",
+            "latitude": "64.144249",
+            "longitude": "-21.922903",
+            "currentRideId": null,
+            "vol": "100",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740403A63"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317347,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 38,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "17204967-e03d-4456-b387-a327bfa7951e",
+            "boardType": "wind3.0",
+            "boardNo": "S0034788",
+            "lockType": "moby",
+            "lockNo": "S0034788",
+            "latitude": "64.146309",
+            "longitude": "-21.927042",
+            "currentRideId": null,
+            "vol": "100",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404044B0"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317118,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 38,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "0896af15-b3c4-474e-b1d3-c2a92cd6bfbf",
+            "boardType": "wind3.0",
+            "boardNo": "S0034832",
+            "lockType": "moby",
+            "lockNo": "S0034832",
+            "latitude": "64.144806",
+            "longitude": "-21.923166",
+            "currentRideId": null,
+            "vol": "91",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404484"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316957,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 34.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "6266d153-cd87-4d58-ba9d-a703408d9186",
+            "boardType": "wind3.0",
+            "boardNo": "S0034836",
+            "lockType": "moby",
+            "lockNo": "S0034836",
+            "latitude": "64.142746",
+            "longitude": "-21.928862",
+            "currentRideId": null,
+            "vol": "39",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404670"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317482,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 13.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "f04279b5-090b-411f-8552-2301f210b5eb",
+            "boardType": "wind3.0",
+            "boardNo": "S0034837",
+            "lockType": "moby",
+            "lockNo": "S0034837",
+            "latitude": "64.144791",
+            "longitude": "-21.913761",
+            "currentRideId": null,
+            "vol": "37",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404039D7"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316904,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 1,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 12.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "52acda3f-43b2-4beb-9819-c9c74efddeef",
+            "boardType": "wind3.0",
+            "boardNo": "S0034843",
+            "lockType": "moby",
+            "lockNo": "S0034843",
+            "latitude": "64.146118",
+            "longitude": "-21.93083",
+            "currentRideId": null,
+            "vol": "99",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740403841"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316847,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 37.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "5300143b-fff0-4088-81d5-465f2fddc78d",
+            "boardType": "wind3.0",
+            "boardNo": "S0034847",
+            "lockType": "moby",
+            "lockNo": "S0034847",
+            "latitude": "64.143852",
+            "longitude": "-21.910627",
+            "currentRideId": null,
+            "vol": "69",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404039E4"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316637,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 25.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "15ec2744-3fb7-4988-aa05-cb661eaa71bb",
+            "boardType": "wind3.0",
+            "boardNo": "S0034849",
+            "lockType": "moby",
+            "lockNo": "S0034849",
+            "latitude": "64.14183",
+            "longitude": "-21.923674",
+            "currentRideId": null,
+            "vol": "77",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740402EAF"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316710,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 28.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "b87e275e-83fc-4286-ad13-61004e789778",
+            "boardType": "wind3.0",
+            "boardNo": "S0034879",
+            "lockType": "moby",
+            "lockNo": "S0034879",
+            "latitude": "64.146568",
+            "longitude": "-21.927124",
+            "currentRideId": null,
+            "vol": "37",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740403827"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317404,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 12.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "e8be7acd-3134-4cab-b148-065789281cf4",
+            "boardType": "wind3.0",
+            "boardNo": "S0034912",
+            "lockType": "moby",
+            "lockNo": "S0034912",
+            "latitude": "64.144905",
+            "longitude": "-21.916008",
+            "currentRideId": null,
+            "vol": "42",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404037D1"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317648,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 14.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "0727884e-552c-4aef-9b3c-523d0772eae2",
+            "boardType": "wind3.0",
+            "boardNo": "S0034942",
+            "lockType": "moby",
+            "lockNo": "S0034942",
+            "latitude": "64.144157",
+            "longitude": "-21.911934",
+            "currentRideId": null,
+            "vol": "50",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404499"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316248,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 18,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "11092020-0f0a-4633-ad4d-9a2556cdb9bc",
+            "boardType": "wind3.0",
+            "boardNo": "S0036122",
+            "lockType": "moby",
+            "lockNo": "S0036122",
+            "latitude": "64.140747",
+            "longitude": "-21.923243",
+            "currentRideId": null,
+            "vol": "94",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740403698"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317187,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 1,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 35.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "57f1ab83-a16f-4733-bc30-2250ddd5dcc8",
+            "boardType": "wind3.0",
+            "boardNo": "S0036653",
+            "lockType": "moby",
+            "lockNo": "S0036653",
+            "latitude": "64.142746",
+            "longitude": "-21.928997",
+            "currentRideId": null,
+            "vol": "37",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404E56"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316159,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 12.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "2dc433dc-b0ed-4a2c-8c35-9bb5fbb0f5d5",
+            "boardType": "wind3.0",
+            "boardNo": "S0036793",
+            "lockType": "moby",
+            "lockNo": "S0036793",
+            "latitude": "64.14283",
+            "longitude": "-21.927385",
+            "currentRideId": null,
+            "vol": "47",
+            "status": 2,
+            "isLocked": 0,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404538"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317857,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 16.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "9255bf00-4414-4952-9d3a-124a24bc1ae9",
+            "boardType": "wind3.0",
+            "boardNo": "S0036803",
+            "lockType": "moby",
+            "lockNo": "S0036803",
+            "latitude": "64.14521",
+            "longitude": "-21.91247",
+            "currentRideId": null,
+            "vol": "48",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404531"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316831,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 17.2,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "ddfb96b5-2b55-436e-86c7-7624c7dba77a",
+            "boardType": "wind3.0",
+            "boardNo": "S0036812",
+            "lockType": "moby",
+            "lockNo": "S0036812",
+            "latitude": "64.144821",
+            "longitude": "-21.92285",
+            "currentRideId": null,
+            "vol": "90",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404552"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316848,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 34,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "8d436e4f-35a3-402a-acf5-04dbc77135a8",
+            "boardType": "wind3.0",
+            "boardNo": "S0036843",
+            "lockType": "moby",
+            "lockNo": "S0036843",
+            "latitude": "64.1441707",
+            "longitude": "-21.9103745",
+            "currentRideId": null,
+            "vol": "75",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC974040455C"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618280601,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 28,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "85422783-fabc-4312-8755-397c4c983d55",
+            "boardType": "wind3.0",
+            "boardNo": "S0037058",
+            "lockType": "moby",
+            "lockNo": "S0037058",
+            "latitude": "64.144432",
+            "longitude": "-21.922859",
+            "currentRideId": null,
+            "vol": "91",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404046C0"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316445,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 34.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "259c79c6-bb34-46b8-a1c1-99a06eaed52a",
+            "boardType": "wind3.0",
+            "boardNo": "S0037218",
+            "lockType": "moby",
+            "lockNo": "S0037218",
+            "latitude": "64.143272",
+            "longitude": "-21.910042",
+            "currentRideId": null,
+            "vol": "93",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC974040418B"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316384,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 35.2,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "6be880c7-dedc-4411-b2bc-8077c1758975",
+            "boardType": "wind3.0",
+            "boardNo": "S0037304",
+            "lockType": "moby",
+            "lockNo": "S0037304",
+            "latitude": "64.146828",
+            "longitude": "-21.923332",
+            "currentRideId": null,
+            "vol": "75",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404041BB"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317305,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 28,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "74cf2eab-c0b0-417b-a9ae-9f0074e401a8",
+            "boardType": "wind3.0",
+            "boardNo": "S0037316",
+            "lockType": "moby",
+            "lockNo": "S0037316",
+            "latitude": "64.141724",
+            "longitude": "-21.925159",
+            "currentRideId": null,
+            "vol": "100",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404038AE"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317141,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 38,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "ebaffa7d-0551-452e-afef-f655ed273ff5",
+            "boardType": "wind3.0",
+            "boardNo": "S0037464",
+            "lockType": "moby",
+            "lockNo": "S0037464",
+            "latitude": "64.142189",
+            "longitude": "-21.924706",
+            "currentRideId": null,
+            "vol": "71",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404CD4"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316622,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 26.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "81778057-67f2-42e3-a2fb-14f326199426",
+            "boardType": "wind3.0",
+            "boardNo": "S0037738",
+            "lockType": "moby",
+            "lockNo": "S0037738",
+            "latitude": "64.141609",
+            "longitude": "-21.92395",
+            "currentRideId": null,
+            "vol": "99",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404C84"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317168,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 37.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "d671871c-992f-4a5e-abb6-a0093febde48",
+            "boardType": "wind3.0",
+            "boardNo": "S0037903",
+            "lockType": "moby",
+            "lockNo": "S0037903",
+            "latitude": "64.144508",
+            "longitude": "-21.922667",
+            "currentRideId": null,
+            "vol": "45",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC97404042C3"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317734,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 16,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "7bea7b80-da71-4f40-b039-e2f57155101c",
+            "boardType": "wind3.0",
+            "boardNo": "S0038183",
+            "lockType": "moby",
+            "lockNo": "S0038183",
+            "latitude": "64.146706",
+            "longitude": "-21.930353",
+            "currentRideId": null,
+            "vol": "90",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404474"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316903,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 34,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "af7a7a0d-dd91-411b-aa66-4b121f8c05c8",
+            "boardType": "wind3.0",
+            "boardNo": "S0039461",
+            "lockType": "moby",
+            "lockNo": "S0039461",
+            "latitude": "64.145096",
+            "longitude": "-21.925657",
+            "currentRideId": null,
+            "vol": "79",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404E35"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317201,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 29.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "044aa8f9-0123-4772-950e-178533855b9d",
+            "boardType": "wind3.0",
+            "boardNo": "S0039466",
+            "lockType": "moby",
+            "lockNo": "S0039466",
+            "latitude": "64.147141",
+            "longitude": "-21.924583",
+            "currentRideId": null,
+            "vol": "69",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404E8A"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317822,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 25.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "d4b43b8f-f713-44a5-bf23-6b4d801bf472",
+            "boardType": "wind3.0",
+            "boardNo": "S0039504",
+            "lockType": "moby",
+            "lockNo": "S0039504",
+            "latitude": "64.144691",
+            "longitude": "-21.92716",
+            "currentRideId": null,
+            "vol": "65",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404D76"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316662,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 24,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "f4a4fe10-5e07-4033-99b2-274be8d93e82",
+            "boardType": "wind3.0",
+            "boardNo": "S0039506",
+            "lockType": "moby",
+            "lockNo": "S0039506",
+            "latitude": "64.143585",
+            "longitude": "-21.913855",
+            "currentRideId": null,
+            "vol": "43",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC:97:40:40:40:A1"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317427,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 15.2,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "17947e29-040b-41e7-9ccc-a9944fed2b8e",
+            "boardType": "wind3.0",
+            "boardNo": "S0039564",
+            "lockType": "moby",
+            "lockNo": "S0039564",
+            "latitude": "64.143082",
+            "longitude": "-21.919401",
+            "currentRideId": null,
+            "vol": "35",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404CFD"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317215,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 12,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "5de53318-d167-4697-b608-b4d537505c21",
+            "boardType": "wind3.0",
+            "boardNo": "S0039637",
+            "lockType": "moby",
+            "lockNo": "S0039637",
+            "latitude": "64.144569",
+            "longitude": "-21.916235",
+            "currentRideId": null,
+            "vol": "32",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404F73"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618291721,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 10.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "492d3bb9-91da-4c26-b0bb-5d310cb6136c",
+            "boardType": "wind3.0",
+            "boardNo": "S0039731",
+            "lockType": "moby",
+            "lockNo": "S0039731",
+            "latitude": "64.141922",
+            "longitude": "-21.924809",
+            "currentRideId": null,
+            "vol": "42",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404DD8"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316841,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 14.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "5407e503-1e0b-4ff8-9acd-7cee43d0acf3",
+            "boardType": "wind3.0",
+            "boardNo": "S0039734",
+            "lockType": "moby",
+            "lockNo": "S0039734",
+            "latitude": "64.146576",
+            "longitude": "-21.925785",
+            "currentRideId": null,
+            "vol": "32",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC:97:40:40:4E:9E"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317218,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 10.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "adb42f56-e5ba-4c83-85f9-cee3d46000d2",
+            "boardType": "wind3.0",
+            "boardNo": "S0039768",
+            "lockType": "moby",
+            "lockNo": "S0039768",
+            "latitude": "64.142578",
+            "longitude": "-21.91185",
+            "currentRideId": null,
+            "vol": "40",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404DB1"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317575,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 14,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "ad74808c-8eb1-4c67-bfe1-f38e86b82850",
+            "boardType": "wind3.0",
+            "boardNo": "S0039831",
+            "lockType": "moby",
+            "lockNo": "S0039831",
+            "latitude": "64.146072",
+            "longitude": "-21.919456",
+            "currentRideId": null,
+            "vol": "92",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404E1A"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316483,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 34.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "c690440c-d465-41b9-98f2-728891623bfc",
+            "boardType": "wind3.0",
+            "boardNo": "S0039851",
+            "lockType": "moby",
+            "lockNo": "S0039851",
+            "latitude": "64.147224",
+            "longitude": "-21.92799",
+            "currentRideId": null,
+            "vol": "92",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404E80"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316151,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 34.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "0e887524-220f-401a-b836-37f533f27558",
+            "boardType": "wind3.0",
+            "boardNo": "S0039870",
+            "lockType": "moby",
+            "lockNo": "S0039870",
+            "latitude": "64.144432",
+            "longitude": "-21.930109",
+            "currentRideId": null,
+            "vol": "61",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404E57"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316184,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 22.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "bfa90bf6-e0c5-435e-aab1-f79e8bc29c47",
+            "boardType": "wind3.0",
+            "boardNo": "S0039990",
+            "lockType": "moby",
+            "lockNo": "S0039990",
+            "latitude": "64.143875",
+            "longitude": "-21.910137",
+            "currentRideId": null,
+            "vol": "100",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404F1E"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317668,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 38,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "a85b3514-effb-40b6-9ea9-02cf82c1527c",
+            "boardType": "wind3.0",
+            "boardNo": "S0040002",
+            "lockType": "moby",
+            "lockNo": "S0040002",
+            "latitude": "64.145103",
+            "longitude": "-21.921364",
+            "currentRideId": null,
+            "vol": "74",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740404F45"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317021,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 27.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "b6bf1c9a-b40e-411f-9331-45dbbfd70c40",
+            "boardType": "wind3.0",
+            "boardNo": "S0040168",
+            "lockType": "moby",
+            "lockNo": "S0040168",
+            "latitude": "64.142159",
+            "longitude": "-21.917784",
+            "currentRideId": null,
+            "vol": "53",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740402B4B"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317008,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 19.2,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "e1c0402e-da13-42a0-a9e0-16d968a32249",
+            "boardType": "wind3.0",
+            "boardNo": "S0040247",
+            "lockType": "moby",
+            "lockNo": "S0040247",
+            "latitude": "64.145195",
+            "longitude": "-21.926357",
+            "currentRideId": null,
+            "vol": "47",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC974040409E"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618316790,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 2,
+            "estimatedRange": 16.8,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "2f89d4d5-966e-45ae-8cb9-c4f94129cf9e",
+            "boardType": "wind3.0",
+            "boardNo": "S0040250",
+            "lockType": "moby",
+            "lockNo": "S0040250",
+            "latitude": "64.143562",
+            "longitude": "-21.909821",
+            "currentRideId": null,
+            "vol": "99",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC974040409D"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317322,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 0,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 3,
+            "estimatedRange": 37.6,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        },
+        {
+            "boardId": "1a8cf664-d852-4dd2-a863-50d8cb36e770",
+            "boardType": "wind3.0",
+            "boardNo": "S0043692",
+            "lockType": "moby",
+            "lockNo": "S0043692",
+            "latitude": "64.142296",
+            "longitude": "-21.913422",
+            "currentRideId": null,
+            "vol": "36",
+            "status": 2,
+            "isLocked": 1,
+            "isReadyForRiding": 1,
+            "lockInfo": {
+                "mac": "BC9740403F3F"
+            },
+            "helmet": null,
+            "isInOperatingHours": 1,
+            "lastReportedTime": 1618317145,
+            "operatingHours": {
+                "from": "00:00",
+                "to": "00:00"
+            },
+            "isMotorStopped": 1,
+            "speedLimit": 25,
+            "city": 52,
+            "volMarker": 1,
+            "estimatedRange": 12.4,
+            "hasParkingPorts": true,
+            "canRideForFree": 0,
+            "defaultBoardPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "_id": "603e4823602f8a2105b7c9eb",
+                "currency": "isk",
+                "maxRideCostCents": 500000,
+                "pricingAmountCents": 3200,
+                "pricingUnitSeconds": 60,
+                "unlockingCents": 10000,
+                "tieredPricing": [],
+                "type": "wind3.0",
+                "extraCharge": 250000,
+                "isTieredPricing": 0
+            },
+            "isReservable": 1,
+            "defaultBoardReservationPriceModel": {
+                "from": {
+                    "hours": 0
+                },
+                "to": {
+                    "hours": 24
+                },
+                "freeReservationSeconds": 300,
+                "_id": "603e4823602f8a30f6b7c9e4",
+                "currency": "isk",
+                "pricingAmountCents": 2000,
+                "pricingUnitSeconds": 60,
+                "type": "wind3.0",
+                "originalPricingAmountCents": 2000
+            },
+            "isNewHelmetAvailable": 0,
+            "isLuckyBoard": 0,
+            "isTieredPricing": 0,
+            "isMustUseHelmet": 0,
+            "isMobileOnline": 1
+        }
+    ],
+    "views": {
+        "currentRide": null,
+        "currentBoardRide": null,
+        "rentBike": null,
+        "rentBoard": null,
+        "isDynamicPrice": 0
+    },
+    "serverTime": 1618317899
+}

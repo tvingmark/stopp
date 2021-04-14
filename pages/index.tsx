@@ -37,6 +37,8 @@ export default function Home({
           </Layout>
       )
   }
+  // This is the Coordinator. Home of data. Do you want map or list ?.
+  // Create three rectangles around your location that you define according to distance to your home.
   return (
     <Layout home>
       <Head>
