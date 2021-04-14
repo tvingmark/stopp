@@ -58,7 +58,6 @@ export default function MapLibre({
   return (
     <>
       <MapContainer ref={mapContainer} />
-      <button onClick={addMarkers}>Test</button>
     </>
   );
 }
