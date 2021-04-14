@@ -55,7 +55,6 @@ export default function Map({
       <div className="my-3">
         <Remote getHopp={updateHopp} />
       </div>
-      <WW />
     </>
   );
 }
