@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({ children, inverse, handleClick }) => {
   }
 };
 
-export default function Remote({
+export default function Banner({
   getHopp,
   children,
 }: {
@@ -43,22 +43,17 @@ export default function Remote({
   }, []);
 
   return (
-    <div className="w-full rounded-xl p-2 bg-red-100 flex overflow-hidden">
-      <div className="flex flex-col py-1 px-2 justify-center">
-        <div className="text-sm font-extrabold">@ Home</div>
-        <div className="text-gray-500 text-xs">Last update: 13:49</div>
+    <>
+      <div className="w-1/2 h-20 rounded-xl p-2 bg-red-100 flex justify-center overflow-hidden mr-1">
+        <div className="flex flex-col justify-center py-1 px-2 items-center">
+          <div className="text-2xl sm:text-3xl font-extrabold">MONSTER</div>
+        </div>
       </div>
-      <div className="flex-grow flex items-center justify-end">
-        <Button inverse={true}>
-          <AddSVG />
-        </Button>
-        <Button>
-          <WorkSVG />
-        </Button>
-        <Button handleClick={getHopp}>
-          <HomeSVG />
-        </Button>
+      <div className="w-1/2 h-20 rounded-xl p-2 bg-yellow-200 flex justify-center overflow-hidden ml-1">
+        <div className="flex flex-col justify-center py-1 px-2 items-center">
+          <div className="text-3xl font-extrabold animate-pulse">09:22</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
