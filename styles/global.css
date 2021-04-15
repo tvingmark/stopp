@@ -13,6 +13,7 @@ body {
   flex: none;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(160deg, #ebb5a7, #6670cc 100%);
 }
 
 * {
