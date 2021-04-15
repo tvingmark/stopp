@@ -1,6 +1,6 @@
 {
-  "name": "Stopp",
-  "short_name": "App",
+  "name": "Til B",
+  "short_name": "GO GO",
   "icons": [
     {
       "src": "icons/android-chrome-192x192.png",
@@ -8,9 +8,9 @@
       "type": "image/png"
     },
     {
-      "src": "/static/icons/icon-512x512.png",
+      "src": "/static/icons/icon-512x512.jpeg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ],
   "theme_color": "#FFFFFF",
