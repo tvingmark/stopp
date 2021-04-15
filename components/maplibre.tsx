@@ -4,7 +4,7 @@ import maplibregl from "maplibre-gl";
 import MapContainer from "./mapContainer";
 import { Bike } from "../workers/comlink.worker";
 
-import CustomMarker from "./maps/customMarker";
+import CustomMarker, { HomeMarker } from "./maps/customMarker";
 
 interface location {
   lat: number;
@@ -52,7 +52,8 @@ export default function MapLibre({
         center: [lng, lat],
         zoom: zoom,
       });
-      const marker = new maplibregl.Marker()
+      const el = HomeMarker();
+      const marker = new maplibregl.Marker(el)
         .setLngLat([home.lng, home.lat])
         .addTo(map.current);
     } else {

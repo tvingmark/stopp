@@ -1,5 +1,6 @@
 import * as Comlink from "comlink";
 import inside from "../lib/mapUtils";
+import { getAllPostIds } from "../lib/posts";
 
 export interface WorkerApi {
   getHopp: typeof getHopp;
@@ -47,6 +48,7 @@ if (process.env.NODE_ENV === "development") {
 
 async function getHopp() {
   const res = await fetch(url + "/data/hopp.json");
+  // const res = await fetch("https://api.hopp.bike/en/free_bike_status.json");
   const json = await res.json();
   const sum = json.data.bikes.reduce(function (accumulator, bike) {
     var polygon = LARGE;
@@ -70,6 +72,16 @@ async function getHopp() {
 
 async function getWind() {
   const res = await fetch(url + "/data/wind.json");
+  // const res = await fetch(
+  //   "https://api-prod.ibyke.io/v2/boards?latitude=64.14504358577395&longitude=-21.91994296310038&isLuckyBoard=0",
+  //   {
+  //     headers: {
+  //       authentication:
+  //         "clientId=EDF64C12-A9AB-4E58-A110-6D37F09EA4F9;userId=ca61433d-546a-4d6d-a80d-81b308396726;ft=085f42ff85865ac2ad843e33e4c946e8",
+  //       "x-app-version": "4.35.0",
+  //     },
+  //   }
+  // );
   const json = await res.json();
   const sum = json.items.reduce(function (accumulator, bike) {
     var polygon = LARGE;
@@ -93,9 +105,9 @@ async function getWind() {
 }
 
 async function getAll() {
-  const hoppResult = await getHopp();
-  const windResult = await getWind();
-  return hoppResult.concat(windResult);
+  // check localstorage for settings
+  const result = await Promise.all([getHopp(), getWind()]);
+  return result.flat();
 }
 
 Comlink.expose(workerApi);

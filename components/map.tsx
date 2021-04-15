@@ -28,6 +28,7 @@ export default function Map({
     comlinkWorkerApiRef.current = Comlink.wrap<WorkerApi>(
       comlinkWorkerRef.current
     );
+    // updateHopp();
     return () => {
       comlinkWorkerRef.current?.terminate();
     };
