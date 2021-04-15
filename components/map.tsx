@@ -35,7 +35,7 @@ export default function Map({
 
   const updateHopp = async () => {
     console.log("HOPP COMLINK");
-    const result = await comlinkWorkerApiRef.current?.getHopp();
+    const result = await comlinkWorkerApiRef.current?.getAll();
     setHoppMarkers(result);
   };
 

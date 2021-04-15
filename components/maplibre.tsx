@@ -1,7 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
+import ReactDOMServer from "react-dom/server";
 import maplibregl from "maplibre-gl";
 import MapContainer from "./mapContainer";
 import { Bike } from "../workers/comlink.worker";
+
+import CustomMarker from "./maps/customMarker";
 
 interface location {
   lat: number;
@@ -29,7 +32,12 @@ export default function MapLibre({
     console.log("Add Markers");
     console.dir(hoppMarkers);
     hoppMarkers.map((bike) => {
-      const marker = new maplibregl.Marker()
+      // const markerRef = React.useRef<HTMLDivElement>();
+      // const customMarker = <CustomMarker type={"hopp"} />;
+
+      const el = document.createElement("div");
+
+      const marker = new maplibregl.Marker(el)
         .setLngLat([bike.lon, home.lat])
         .addTo(map.current);
     });
@@ -49,7 +57,10 @@ export default function MapLibre({
         .addTo(map.current);
     } else {
       hoppMarkers.map((bike) => {
-        const marker = new maplibregl.Marker()
+        // const markerRef = React.useRef<HTMLDivElement>();
+        // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
+        const el = CustomMarker(bike);
+        const marker = new maplibregl.Marker(el)
           .setLngLat([bike.lon, bike.lat])
           .addTo(map.current);
       });

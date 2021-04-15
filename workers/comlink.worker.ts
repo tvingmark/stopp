@@ -4,6 +4,7 @@ import inside from "../lib/mapUtils";
 export interface WorkerApi {
   getHopp: typeof getHopp;
   getWind: typeof getWind;
+  getAll: typeof getAll;
 }
 
 export interface Bike {
@@ -11,11 +12,13 @@ export interface Bike {
   lon: number;
   batt: number;
   id: string;
+  vendor: "hopp" | "wind";
 }
 
 const workerApi: WorkerApi = {
   getHopp,
   getWind,
+  getAll,
 };
 
 const BATTERY_LEVEL = 30;
@@ -36,13 +39,13 @@ const LARGE = [
   [-21.939611434936523, 64.14558344421198],
 ];
 
-async function getHopp() {
-  let url = "https://" + process.env.NEXT_PUBLIC_VERCEL_URL;
-  console.log("URL: ", process.env.NEXT_PUBLIC_VERCEL_URL);
-  if (process.env.NODE_ENV === "development") {
-    url = "https://" + process.env.NEXT_PUBLIC_HOSTNAME;
-  }
+let url = "https://" + process.env.NEXT_PUBLIC_VERCEL_URL;
+console.log("URL: ", process.env.NEXT_PUBLIC_HOSTNAME);
+if (process.env.NODE_ENV === "development") {
+  url = "https://" + process.env.NEXT_PUBLIC_HOSTNAME;
+}
 
+async function getHopp() {
   const res = await fetch(url + "/data/hopp.json");
   const json = await res.json();
   const sum = json.data.bikes.reduce(function (accumulator, bike) {
@@ -56,6 +59,7 @@ async function getHopp() {
         lat: bike.lat,
         lon: bike.lon,
         id: bike.bike_id,
+        vendor: "hopp",
       };
       accumulator.push(stoppBike);
     }
@@ -65,10 +69,7 @@ async function getHopp() {
 }
 
 async function getWind() {
-  console.log("Get Wind");
-  const res = await fetch(
-    "https://3000-gold-coyote-u4ogxg7s.ws-eu03.gitpod.io/data/wind.json"
-  );
+  const res = await fetch(url + "/data/wind.json");
   const json = await res.json();
   const sum = json.items.reduce(function (accumulator, bike) {
     var polygon = LARGE;
@@ -76,13 +77,25 @@ async function getWind() {
       bike.vol > BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
     ) {
-      accumulator.push(bike);
+      console.dir(bike);
+      const stoppBike: Bike = {
+        batt: bike.vol,
+        lat: bike.latitude,
+        lon: bike.longitude,
+        id: bike.boardId,
+        vendor: "wind",
+      };
+      accumulator.push(stoppBike);
     }
     return accumulator;
   }, []);
-  console.log("Wind:");
-  console.dir(sum);
-  return sum.length;
+  return sum;
+}
+
+async function getAll() {
+  const hoppResult = await getHopp();
+  const windResult = await getWind();
+  return hoppResult.concat(windResult);
 }
 
 Comlink.expose(workerApi);
