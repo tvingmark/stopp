@@ -1,9 +1,11 @@
 import * as Comlink from "comlink";
 import inside from "../lib/mapUtils";
+import { getAllPostIds } from "../lib/posts";
 
 export interface WorkerApi {
   getHopp: typeof getHopp;
   getWind: typeof getWind;
+  getAll: typeof getAll;
 }
 
 export interface Bike {
@@ -11,11 +13,13 @@ export interface Bike {
   lon: number;
   batt: number;
   id: string;
+  vendor: "hopp" | "wind";
 }
 
 const workerApi: WorkerApi = {
   getHopp,
   getWind,
+  getAll,
 };
 
 const BATTERY_LEVEL = 30;
@@ -36,14 +40,15 @@ const LARGE = [
   [-21.939611434936523, 64.14558344421198],
 ];
 
-async function getHopp() {
-  let url = "https://" + process.env.NEXT_PUBLIC_VERCEL_URL;
-  console.log("URL: ", process.env.NEXT_PUBLIC_VERCEL_URL);
-  if (process.env.NODE_ENV === "development") {
-    url = "https://" + process.env.NEXT_PUBLIC_HOSTNAME;
-  }
+let url = "https://" + process.env.NEXT_PUBLIC_VERCEL_URL;
+console.log("URL: ", process.env.NEXT_PUBLIC_HOSTNAME);
+if (process.env.NODE_ENV === "development") {
+  url = "https://" + process.env.NEXT_PUBLIC_HOSTNAME;
+}
 
+async function getHopp() {
   const res = await fetch(url + "/data/hopp.json");
+  // const res = await fetch("https://api.hopp.bike/en/free_bike_status.json");
   const json = await res.json();
   const sum = json.data.bikes.reduce(function (accumulator, bike) {
     var polygon = LARGE;
@@ -56,6 +61,7 @@ async function getHopp() {
         lat: bike.lat,
         lon: bike.lon,
         id: bike.bike_id,
+        vendor: "hopp",
       };
       accumulator.push(stoppBike);
     }
@@ -65,10 +71,17 @@ async function getHopp() {
 }
 
 async function getWind() {
-  console.log("Get Wind");
-  const res = await fetch(
-    "https://3000-gold-coyote-u4ogxg7s.ws-eu03.gitpod.io/data/wind.json"
-  );
+  const res = await fetch(url + "/data/wind.json");
+  // const res = await fetch(
+  //   "https://api-prod.ibyke.io/v2/boards?latitude=64.14504358577395&longitude=-21.91994296310038&isLuckyBoard=0",
+  //   {
+  //     headers: {
+  //       authentication:
+  //         "clientId=EDF64C12-A9AB-4E58-A110-6D37F09EA4F9;userId=ca61433d-546a-4d6d-a80d-81b308396726;ft=085f42ff85865ac2ad843e33e4c946e8",
+  //       "x-app-version": "4.35.0",
+  //     },
+  //   }
+  // );
   const json = await res.json();
   const sum = json.items.reduce(function (accumulator, bike) {
     var polygon = LARGE;
@@ -76,13 +89,25 @@ async function getWind() {
       bike.vol > BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
     ) {
-      accumulator.push(bike);
+      console.dir(bike);
+      const stoppBike: Bike = {
+        batt: bike.vol,
+        lat: bike.latitude,
+        lon: bike.longitude,
+        id: bike.boardId,
+        vendor: "wind",
+      };
+      accumulator.push(stoppBike);
     }
     return accumulator;
   }, []);
-  console.log("Wind:");
-  console.dir(sum);
-  return sum.length;
+  return sum;
+}
+
+async function getAll() {
+  // check localstorage for settings
+  const result = await Promise.all([getHopp(), getWind()]);
+  return result.flat();
 }
 
 Comlink.expose(workerApi);

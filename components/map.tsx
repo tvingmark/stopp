@@ -28,6 +28,7 @@ export default function Map({
     comlinkWorkerApiRef.current = Comlink.wrap<WorkerApi>(
       comlinkWorkerRef.current
     );
+    // updateHopp();
     return () => {
       comlinkWorkerRef.current?.terminate();
     };
@@ -35,7 +36,7 @@ export default function Map({
 
   const updateHopp = async () => {
     console.log("HOPP COMLINK");
-    const result = await comlinkWorkerApiRef.current?.getHopp();
+    const result = await comlinkWorkerApiRef.current?.getAll();
     setHoppMarkers(result);
   };
 
