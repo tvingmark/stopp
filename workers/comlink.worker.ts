@@ -13,7 +13,7 @@ export interface Bike {
   lon: number;
   batt: number;
   id: string;
-  vendor: "hopp" | "wind";
+  vendor: "hopp" | "wind" | "bus";
 }
 
 const workerApi: WorkerApi = {
@@ -50,7 +50,10 @@ async function getHopp() {
   const res = await fetch(url + "/data/hopp.json");
   // const res = await fetch(process.env.NEXT_PUBLIC_HOPP_URL);
   const json = await res.json();
-  const sum = json.data.bikes.reduce(function (accumulator, bike) {
+  const sum = json.data.bikes.reduce(function (
+    accumulator,
+    bike
+  ) {
     var polygon = LARGE;
     if (
       bike.hopp_battery_level > BATTERY_LEVEL &&
@@ -66,7 +69,8 @@ async function getHopp() {
       accumulator.push(stoppBike);
     }
     return accumulator;
-  }, []);
+  },
+  []);
   return sum;
 }
 
@@ -79,13 +83,15 @@ async function getWind() {
   //   },
   // });
   const json = await res.json();
-  const sum = json.items.reduce(function (accumulator, bike) {
+  const sum = json.items.reduce(function (
+    accumulator,
+    bike
+  ) {
     var polygon = LARGE;
     if (
       bike.vol > BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
     ) {
-      console.dir(bike);
       const stoppBike: Bike = {
         batt: bike.vol,
         lat: bike.latitude,
@@ -96,13 +102,63 @@ async function getWind() {
       accumulator.push(stoppBike);
     }
     return accumulator;
-  }, []);
+  },
+  []);
   return sum;
 }
 
+async function getBusPos() {
+  const res = await fetch(url + "/data/bus.json");
+  const json = await res.json();
+
+  const sum = json.positions.reduce(function (
+    accumulator,
+    bus
+  ) {
+    const stoppBus: Bike = {
+      batt: 0,
+      lat: bus.lat,
+      lon: bus.lon,
+      id: bus.routeNumber,
+      vendor: "bus",
+    };
+    accumulator.push(stoppBus);
+    return accumulator;
+  },
+  []);
+  return sum;
+}
+
+// async function getBusPos() {
+//   const res = await fetch(url + "/data/bus.json");
+//   const json = await res.json();
+//   console.dir(json.positions);
+//   const sum = json.positions.reduce(function (
+//     accumulator,
+//     bus
+//   ) {
+//     // console.dir(bus);
+//     const stoppBus: Bike = {
+//       lat: bus.lat,
+//       lon: bus.lon,
+//       id: bus.routeNumber,
+//       vendor: "bus",
+//     };
+//     console.dir(stoppBus);
+//     console.dir(accumulator);
+//     accumulator.push(stoppBus);
+//   },
+//   []);
+//   return sum;
+// }
+
 async function getAll() {
   // check localstorage for settings
-  const result = await Promise.all([getHopp(), getWind()]);
+  const result = await Promise.all([
+    getHopp(),
+    getWind(),
+    getBusPos(),
+  ]);
   return result.flat();
 }
 
