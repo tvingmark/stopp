@@ -9,10 +9,11 @@ body {
 }
 
 #__next {
-    width: 100%;
-    flex: none;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #ebb5a7, #6670cc 100%);
 }
 
 * {
@@ -35,4 +36,5 @@ img {
 
 .mapboxgl-canvas {
   overflow: hidden;
+  border-radius: 15px;
 }

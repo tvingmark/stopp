@@ -15,8 +15,12 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div className="relative flex flex-col flex-1 w-full overflow-hidden bg-white shadow sm:max-w-xl mx-auto">
-      <main className="flex-grow p-5">{children}</main>
+    <div
+      className="relative flex flex-col flex-1 w-full overflow-hidden shadow sm:max-w-xl mx-auto"
+    >
+      <main className="flex flex-col flex-grow p-5 justify-end sm:justify-center">
+        {children}
+      </main>
     </div>
   );
 }
