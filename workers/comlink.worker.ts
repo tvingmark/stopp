@@ -50,7 +50,10 @@ async function getHopp() {
   const res = await fetch(url + "/data/hopp.json");
   // const res = await fetch(process.env.NEXT_PUBLIC_HOPP_URL);
   const json = await res.json();
-  const sum = json.data.bikes.reduce(function (accumulator, bike) {
+  const sum = json.data.bikes.reduce(function (
+    accumulator,
+    bike
+  ) {
     var polygon = LARGE;
     if (
       bike.hopp_battery_level > BATTERY_LEVEL &&
@@ -66,7 +69,8 @@ async function getHopp() {
       accumulator.push(stoppBike);
     }
     return accumulator;
-  }, []);
+  },
+  []);
   return sum;
 }
 
@@ -79,13 +83,15 @@ async function getWind() {
   //   },
   // });
   const json = await res.json();
-  const sum = json.items.reduce(function (accumulator, bike) {
+  const sum = json.items.reduce(function (
+    accumulator,
+    bike
+  ) {
     var polygon = LARGE;
     if (
       bike.vol > BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
     ) {
-      console.dir(bike);
       const stoppBike: Bike = {
         batt: bike.vol,
         lat: bike.latitude,
@@ -96,7 +102,8 @@ async function getWind() {
       accumulator.push(stoppBike);
     }
     return accumulator;
-  }, []);
+  },
+  []);
   return sum;
 }
 

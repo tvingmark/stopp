@@ -9,6 +9,11 @@ import { WorkerApi } from "../workers/comlink.worker";
 
 import { Bike } from "../workers/comlink.worker";
 
+interface Position {
+  lat: number;
+  lon: number;
+}
+
 export default function Map({
   children,
   home,
@@ -18,9 +23,25 @@ export default function Map({
 }) {
   let emptyStoppBikes: Array<Bike> = [];
 
-  const [hoppMarkers, setHoppMarkers] = React.useState(emptyStoppBikes);
+  const [
+    userLocation,
+    setUserLocation,
+  ] = React.useState<Position>({ lat: 0, lon: 0 });
+  const [hoppMarkers, setHoppMarkers] = React.useState(
+    emptyStoppBikes
+  );
   const comlinkWorkerRef = React.useRef<Worker>();
-  const comlinkWorkerApiRef = React.useRef<Comlink.Remote<WorkerApi>>();
+  const comlinkWorkerApiRef = React.useRef<
+    Comlink.Remote<WorkerApi>
+  >();
+
+  function updateLocation(pos) {
+    setUserLocation({
+      lat: pos.coords.latitude,
+      lon: pos.coords.longitude,
+    });
+    console.dir(pos);
+  }
 
   React.useEffect(() => {
     comlinkWorkerRef.current = new Worker(
@@ -29,6 +50,14 @@ export default function Map({
     comlinkWorkerApiRef.current = Comlink.wrap<WorkerApi>(
       comlinkWorkerRef.current
     );
+
+    if (navigator.geolocation) {
+      let pos = navigator.geolocation.getCurrentPosition(
+        updateLocation
+      );
+    } else {
+      alert("ERROR");
+    }
     // updateHopp();
     return () => {
       comlinkWorkerRef.current?.terminate();
@@ -41,14 +70,18 @@ export default function Map({
     setHoppMarkers(result);
   };
 
+  // let myHome = {
+  //   lat: 64.1448,
+  //   lng: -21.9204,
+  //   zoom: 14.2,
+  // };
+
   let myHome = {
-    lat: 64.1448,
-    lng: -21.9204,
+    lat: userLocation.lat ?? 0,
+    lng: userLocation.lon ?? 0,
     zoom: 14.2,
   };
 
-  console.log("HoppMarkers: ", hoppMarkers.length);
-  console.dir();
   return (
     <>
       <div className="my-3 flex justify-center">
