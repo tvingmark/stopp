@@ -57,7 +57,7 @@ export default function Location({
             Locations
           </div>
           <div className="text-large font-medium text-center">
-            Add locations for more speed 🚀
+            Add locations for accuracy and more speed 🚀
           </div>
           <div className="h-14 rounded-xl my-4">
             <form

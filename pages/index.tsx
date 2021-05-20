@@ -2,11 +2,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react' 
 import Layout, { siteTitle } from '../components/layout'
 import Map from '../components/map'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
-import { GetStaticProps } from 'next'
+
 
 export default function Home({
   allPostsData
@@ -49,13 +45,3 @@ export default function Home({
     </Layout>
   )
 }
-
-export const getStaticProps : GetStaticProps = async () =>
-{
-    const allPostsData = getSortedPostsData()
-    return {
-        props: {
-            allPostsData
-        }
-    }
-} 

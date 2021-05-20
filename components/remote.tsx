@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import WorkSVG from "./svg/work";
+import LocationSVG from "./svg/location";
+import RefreshSVG from "./svg/refresh";
 import HomeSVG from "./svg/home";
 import AddSVG from "./svg/add";
 import { url } from "node:inspector";
@@ -61,11 +63,11 @@ export default function Remote({
         </div>
       </div>
       <div className="flex-grow flex items-center justify-end">
-        <Button handleClick={goToLocation} inverse={true}>
-          <AddSVG />
+        <Button handleClick={getHopp} inverse={true}>
+          <RefreshSVG />
         </Button>
         <Button>
-          <WorkSVG />
+          <LocationSVG />
         </Button>
         <Button handleClick={getHopp}>
           <HomeSVG />
