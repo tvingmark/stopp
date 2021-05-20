@@ -1,0 +1,20 @@
+[
+    {
+        "place_id": 248876013,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 819429558,
+        "boundingbox": [
+            "64.1448109",
+            "64.1451173",
+            "-21.9205118",
+            "-21.9199951"
+        ],
+        "lat": "64.14500735",
+        "lon": "-21.92021035682953",
+        "display_name": "85, Hverfisgata, Skuggahverfi, Arnarhóll, Miðborg, Reykjavíkurborg, Höfuðborgarsvæðið, 101, Ísland",
+        "class": "building",
+        "type": "apartments",
+        "importance": 0.21100000000000002
+    }
+]

@@ -4,7 +4,9 @@ import maplibregl from "maplibre-gl";
 import MapContainer from "./mapContainer";
 import { Bike } from "../workers/comlink.worker";
 
-import CustomMarker, { HomeMarker } from "./maps/customMarker";
+import CustomMarker, {
+  HomeMarker,
+} from "./maps/customMarker";
 
 interface location {
   lat: number;
@@ -27,7 +29,8 @@ export default function MapLibre({
   const [lng, setLng] = useState(home.lng);
   const [lat, setLat] = useState(home.lat);
   const [zoom, setZoom] = useState(home.zoom);
-
+  //   lat: 64.1448,
+  //   lng: -21.9204,
   function addMarkers() {
     console.log("Add Markers");
     console.dir(hoppMarkers);
@@ -49,14 +52,14 @@ export default function MapLibre({
         container: mapContainer.current,
         style:
           "https://api.maptiler.com/maps/pastel/style.json?key=I5JyAqVoKa0bzAa97qBl",
-        center: [lng, lat],
+        center: [-21.9204, 64.1448],
         zoom: zoom,
       });
+    } else {
       const el = HomeMarker();
       const marker = new maplibregl.Marker(el)
         .setLngLat([home.lng, home.lat])
         .addTo(map.current);
-    } else {
       hoppMarkers.map((bike) => {
         // const markerRef = React.useRef<HTMLDivElement>();
         // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
@@ -66,7 +69,7 @@ export default function MapLibre({
           .addTo(map.current);
       });
     }
-  }, [hoppMarkers]);
+  }, [hoppMarkers, home]);
   return (
     <>
       <MapContainer ref={mapContainer} />

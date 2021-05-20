@@ -9,6 +9,11 @@ import { WorkerApi } from "../workers/comlink.worker";
 
 import { Bike } from "../workers/comlink.worker";
 
+export interface Location {
+  lat: number;
+  lon: number;
+}
+
 export default function Map({
   children,
   home,
@@ -18,9 +23,47 @@ export default function Map({
 }) {
   let emptyStoppBikes: Array<Bike> = [];
 
-  const [hoppMarkers, setHoppMarkers] = React.useState(emptyStoppBikes);
+  const [userLocation, setUserLocation] =
+    React.useState<Location>({
+      lat: 64.1448,
+      lon: -21.9204,
+    });
+  const [hoppMarkers, setHoppMarkers] =
+    React.useState(emptyStoppBikes);
   const comlinkWorkerRef = React.useRef<Worker>();
-  const comlinkWorkerApiRef = React.useRef<Comlink.Remote<WorkerApi>>();
+  const comlinkWorkerApiRef =
+    React.useRef<Comlink.Remote<WorkerApi>>();
+
+  function updateLocation(pos) {
+    console.log("Updating location: ");
+    console.dir(pos);
+    setUserLocation({
+      lat: pos.coords.latitude,
+      lon: pos.coords.longitude,
+    });
+  }
+
+  function showError(error) {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        console.log(
+          "User denied the request for Geolocation."
+        );
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert("Location information is unavailable.");
+        console.log("Location information is unavailable.");
+        break;
+      case error.TIMEOUT:
+        console.log(
+          "The request to get user location timed out."
+        );
+        break;
+      case error.UNKNOWN_ERROR:
+        console.log("An unknown error occurred.");
+        break;
+    }
+  }
 
   React.useEffect(() => {
     comlinkWorkerRef.current = new Worker(
@@ -29,6 +72,15 @@ export default function Map({
     comlinkWorkerApiRef.current = Comlink.wrap<WorkerApi>(
       comlinkWorkerRef.current
     );
+
+    if (navigator.geolocation) {
+      let pos = navigator.geolocation.getCurrentPosition(
+        updateLocation,
+        showError
+      );
+    } else {
+      alert("ERROR");
+    }
     // updateHopp();
     return () => {
       comlinkWorkerRef.current?.terminate();
@@ -37,18 +89,25 @@ export default function Map({
 
   const updateHopp = async () => {
     console.log("HOPP COMLINK");
-    const result = await comlinkWorkerApiRef.current?.getAll();
+    const result =
+      await comlinkWorkerApiRef.current?.getAll(
+        userLocation
+      );
     setHoppMarkers(result);
   };
 
+  // let myHome = {
+  //   lat: 64.1448,
+  //   lng: -21.9204,
+  //   zoom: 14.2,
+  // };
+
   let myHome = {
-    lat: 64.1448,
-    lng: -21.9204,
+    lat: userLocation.lat ?? 0,
+    lng: userLocation.lon ?? 0,
     zoom: 14.2,
   };
 
-  console.log("HoppMarkers: ", hoppMarkers.length);
-  console.dir();
   return (
     <>
       <div className="my-3 flex justify-center">
