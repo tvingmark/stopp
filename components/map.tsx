@@ -8,6 +8,7 @@ import * as Comlink from "comlink";
 import { WorkerApi } from "../workers/comlink.worker";
 
 import { Bike } from "../workers/comlink.worker";
+import YallaYallaSVG from "./svg/yallayalla";
 
 export interface Location {
   lat: number;
@@ -111,8 +112,8 @@ export default function Map({
   return (
     <>
       <div className="my-3 flex justify-center">
-        <div className="text-5xl opacity-40 font-extrabold whitespace-nowrap">
-          TIL B TIL B TIL B TIL B TIL B TIL B TIL B
+        <div className="w-full text-5xl opacity-40 font-extrabold whitespace-nowrap">
+          <YallaYallaSVG />
         </div>
       </div>
       <div className="my-3 flex">
