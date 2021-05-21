@@ -9,7 +9,11 @@ interface ButtonProps {
   inverse?: boolean | false;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, inverse, handleClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  inverse,
+  handleClick,
+}) => {
   if (inverse) {
     return (
       <div
@@ -38,7 +42,11 @@ export default function Banner({
   getHopp: () => void;
   children?: React.ReactNode;
 }) {
-  const [clock, setClock] = React.useState({ h: "00", m: "00", s: "00" });
+  const [clock, setClock] = React.useState({
+    h: "00",
+    m: "00",
+    s: "00",
+  });
   useEffect(() => {
     setTimeout(() => {
       var d = new Date();
@@ -56,12 +64,14 @@ export default function Banner({
 
   return (
     <>
-      <div className="w-1/2 h-20 rounded-xl p-2 bg-red-100 flex justify-center overflow-hidden mr-1">
-        <div className="flex flex-col justify-center py-1 px-2 items-center">
-          <div className="text-2xl sm:text-3xl font-extrabold">MONSTER</div>
+      <div className="w-1/2 rounded-xl bg-red-100 flex justify-center overflow-hidden mr-1">
+        <div className="flex flex-col justify-center items-center">
+          <div className="w-full h-full text-2xl sm:text-3xl font-extrabold">
+            <img src="/images/ad.jpg" />
+          </div>
         </div>
       </div>
-      <div className="w-1/2 h-20 rounded-xl p-2 bg-yellow-200 flex justify-center overflow-hidden ml-1">
+      <div className="w-1/2 rounded-xl p-2 bg-yellow-200 flex justify-center overflow-hidden ml-1">
         <div className="flex flex-col justify-center py-1 px-2 items-center">
           <div className="text-3xl font-extrabold">
             {clock.h}
