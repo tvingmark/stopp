@@ -60,6 +60,9 @@ export default function MapLibre({
       const marker = new maplibregl.Marker(el)
         .setLngLat([home.lng, home.lat])
         .addTo(map.current);
+      map.current.flyTo({
+        center: [home.lng, home.lat],
+      });
       hoppMarkers.map((bike) => {
         // const markerRef = React.useRef<HTMLDivElement>();
         // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
