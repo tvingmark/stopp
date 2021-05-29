@@ -66,7 +66,7 @@ export default function Banner({
       <div className="w-1/2 rounded-xl bg-red-100 flex justify-center overflow-hidden mr-1">
         <div className="flex flex-col justify-center items-center">
           <div className="w-full h-full text-2xl sm:text-3xl font-extrabold">
-            <img src="/images/ad.jpg" />
+            <img src="/images/banner.jpg" />
           </div>
         </div>
       </div>
