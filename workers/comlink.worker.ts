@@ -4,6 +4,7 @@ import { Location } from "../components/map";
 import {
   filterByArea,
   FilterConfig,
+  FilterSize,
 } from "../lib/mapUtils";
 import { getAllPostIds } from "../lib/posts";
 
@@ -28,7 +29,7 @@ const workerApi: WorkerApi = {
 };
 
 const config: FilterConfig = {
-  RADIUS: 200,
+  RADIUS: FilterSize.LARGE,
   BATTERY_LEVEL: 30,
 };
 const BATTERY_LEVEL = 30;
@@ -43,11 +44,13 @@ async function getHopp(location: Location) {
   // const res = await fetch(url + "/data/hopp.json");
   const res = await fetch(process.env.NEXT_PUBLIC_HOPP_URL);
   const json = await res.json();
+  const polygon = filterByArea(location, config);
+  console.log("Hopp: Polygon");
+  console.dir(polygon);
   const sum = json.data.bikes.reduce(function (
     accumulator,
     bike
   ) {
-    const polygon = filterByArea(location, config);
     if (
       bike.hopp_battery_level > config.BATTERY_LEVEL &&
       inside([bike.lon, bike.lat], polygon)
@@ -64,6 +67,8 @@ async function getHopp(location: Location) {
     return accumulator;
   },
   []);
+  console.log("Hopp:");
+  console.dir(sum);
   return sum;
 }
 
@@ -87,11 +92,13 @@ async function getWind(location: Location) {
     }
   );
   const json = await res.json();
+  const polygon = filterByArea(location, config);
+  console.log("Wind: Polygon");
+  console.dir(polygon);
   const sum = json.items.reduce(function (
     accumulator,
     bike
   ) {
-    const polygon = filterByArea(location, config);
     if (
       bike.vol > config.BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
@@ -108,6 +115,8 @@ async function getWind(location: Location) {
     return accumulator;
   },
   []);
+  console.log("Wind:");
+  console.dir(sum);
   return sum;
 }
 

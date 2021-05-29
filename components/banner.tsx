@@ -59,7 +59,6 @@ export default function Banner({
         s: ("0" + s).substr(-2),
       });
     }, 1000);
-    console.log("Remote useEffect");
   }, [clock]);
 
   return (
