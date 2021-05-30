@@ -87,15 +87,16 @@ export default function MapLibre({
         config
       );
       if (map.current.getSource("rvk")) {
-        map.current.getSource("rvk").setData({
-          type: "geojson",
-          data: {
-            properties: [],
-            type: "Feature",
-            geometry: {
-              type: "Polygon",
-              coordinates: [polygon],
-            },
+        const source: mapboxgl.GeoJSONSource =
+          this.map.getSource(
+            "rvk"
+          ) as mapboxgl.GeoJSONSource;
+        source.setData({
+          properties: [],
+          type: "Feature",
+          geometry: {
+            type: "Polygon",
+            coordinates: [polygon],
           },
         });
       } else {
