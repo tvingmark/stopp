@@ -41,6 +41,10 @@ export interface FilterConfig {
   BATTERY_LEVEL: number;
 }
 
+export interface Polygon {
+  area: Array<Array<number>>;
+}
+
 export function filterByArea(
   point: Location,
   filter: FilterConfig
@@ -60,19 +64,19 @@ export function filterByArea(
   // [ b   c ]
   const a: Location = {
     lat: point.lat - filterSizeDEG,
-    lon: point.lon + filterSizeDEG,
+    lon: point.lon + filterSizeDEG * 2,
   };
   const b: Location = {
     lat: point.lat - filterSizeDEG,
-    lon: point.lon - filterSizeDEG,
+    lon: point.lon - filterSizeDEG * 2,
   };
   const c: Location = {
     lat: point.lat + filterSizeDEG,
-    lon: point.lon - filterSizeDEG,
+    lon: point.lon - filterSizeDEG * 2,
   };
   const d: Location = {
     lat: point.lat + filterSizeDEG,
-    lon: point.lon + filterSizeDEG,
+    lon: point.lon + filterSizeDEG * 2,
   };
   const boundingBox = [
     [a.lon, a.lat],

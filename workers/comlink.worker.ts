@@ -29,7 +29,7 @@ const workerApi: WorkerApi = {
 };
 
 const config: FilterConfig = {
-  RADIUS: FilterSize.LARGE,
+  RADIUS: FilterSize.MEDIUM,
   BATTERY_LEVEL: 30,
 };
 const BATTERY_LEVEL = 30;

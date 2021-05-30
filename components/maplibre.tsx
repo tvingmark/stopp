@@ -3,6 +3,11 @@ import ReactDOMServer from "react-dom/server";
 import maplibregl from "maplibre-gl";
 import MapContainer from "./mapContainer";
 import { Bike } from "../workers/comlink.worker";
+import {
+  filterByArea,
+  FilterConfig,
+  FilterSize,
+} from "../lib/mapUtils";
 
 import CustomMarker, {
   HomeMarker,
@@ -29,6 +34,11 @@ export default function MapLibre({
   const [lng, setLng] = useState(home.lng);
   const [lat, setLat] = useState(home.lat);
   const [zoom, setZoom] = useState(home.zoom);
+
+  const config: FilterConfig = {
+    RADIUS: FilterSize.MEDIUM,
+    BATTERY_LEVEL: 30,
+  };
   //   lat: 64.1448,
   //   lng: -21.9204,
   function addMarkers() {
@@ -71,6 +81,46 @@ export default function MapLibre({
           .setLngLat([bike.lon, bike.lat])
           .addTo(map.current);
       });
+
+      const polygon = filterByArea(
+        { lat: home.lat, lon: home.lng },
+        config
+      );
+      if (map.current.getSource("rvk")) {
+        map.current.getSource("rvk").setData({
+          type: "geojson",
+          data: {
+            properties: [],
+            type: "Feature",
+            geometry: {
+              type: "Polygon",
+              coordinates: [polygon],
+            },
+          },
+        });
+      } else {
+        map.current.addSource("rvk", {
+          type: "geojson",
+          data: {
+            properties: [],
+            type: "Feature",
+            geometry: {
+              type: "Polygon",
+              coordinates: [polygon],
+            },
+          },
+        });
+        map.current.addLayer({
+          id: "maine",
+          type: "fill",
+          source: "rvk",
+          layout: {},
+          paint: {
+            "fill-color": "rgba(102, 112, 204, 0.1)",
+            "fill-outline-color": "#6670cc",
+          },
+        });
+      }
     }
   }, [hoppMarkers, home]);
   return (
