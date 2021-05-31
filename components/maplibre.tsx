@@ -87,10 +87,10 @@ export default function MapLibre({
         config
       );
       if (map.current.getSource("rvk")) {
-        const source: mapboxgl.GeoJSONSource =
-          this.map.getSource(
+        const source: maplibregl.GeoJSONSource =
+          map.current.getSource(
             "rvk"
-          ) as mapboxgl.GeoJSONSource;
+          ) as maplibregl.GeoJSONSource;
         source.setData({
           properties: [],
           type: "Feature",
