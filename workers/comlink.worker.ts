@@ -1,6 +1,11 @@
 import * as Comlink from "comlink";
 import inside from "../lib/mapUtils";
 import { Location } from "../components/map";
+import {
+  filterByArea,
+  FilterConfig,
+  FilterSize,
+} from "../lib/mapUtils";
 import { getAllPostIds } from "../lib/posts";
 
 export interface WorkerApi {
@@ -23,23 +28,11 @@ const workerApi: WorkerApi = {
   getAll,
 };
 
+const config: FilterConfig = {
+  RADIUS: FilterSize.MEDIUM,
+  BATTERY_LEVEL: 30,
+};
 const BATTERY_LEVEL = 30;
-
-const SHORT = [
-  [-21.92097544670105, 64.14539629578222],
-  [-21.92223072052002, 64.14423126843914],
-  [-21.919044256210327, 64.14358323006506],
-  [-21.91796064376831, 64.14467342312615],
-  [-21.92097544670105, 64.14539629578222],
-];
-
-const LARGE = [
-  [-21.939611434936523, 64.14558344421198],
-  [-21.91875457763672, 64.14075461114092],
-  [-21.913089752197266, 64.14558344421198],
-  [-21.933002471923828, 64.15041143760895],
-  [-21.939611434936523, 64.14558344421198],
-];
 
 let url = "https://" + process.env.NEXT_PUBLIC_VERCEL_URL;
 console.log("URL: ", process.env.NEXT_PUBLIC_HOSTNAME);
@@ -47,17 +40,19 @@ if (process.env.NODE_ENV === "development") {
   url = "https://" + process.env.NEXT_PUBLIC_HOSTNAME;
 }
 
-async function getHopp() {
+async function getHopp(location: Location) {
   // const res = await fetch(url + "/data/hopp.json");
   const res = await fetch(process.env.NEXT_PUBLIC_HOPP_URL);
   const json = await res.json();
+  const polygon = filterByArea(location, config);
+  console.log("Hopp: Polygon");
+  console.dir(polygon);
   const sum = json.data.bikes.reduce(function (
     accumulator,
     bike
   ) {
-    var polygon = LARGE;
     if (
-      bike.hopp_battery_level > BATTERY_LEVEL &&
+      bike.hopp_battery_level > config.BATTERY_LEVEL &&
       inside([bike.lon, bike.lat], polygon)
     ) {
       const stoppBike: Bike = {
@@ -72,6 +67,8 @@ async function getHopp() {
     return accumulator;
   },
   []);
+  console.log("Hopp:");
+  console.dir(sum);
   return sum;
 }
 
@@ -95,13 +92,15 @@ async function getWind(location: Location) {
     }
   );
   const json = await res.json();
+  const polygon = filterByArea(location, config);
+  console.log("Wind: Polygon");
+  console.dir(polygon);
   const sum = json.items.reduce(function (
     accumulator,
     bike
   ) {
-    var polygon = LARGE;
     if (
-      bike.vol > BATTERY_LEVEL &&
+      bike.vol > config.BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
     ) {
       const stoppBike: Bike = {
@@ -116,13 +115,15 @@ async function getWind(location: Location) {
     return accumulator;
   },
   []);
+  console.log("Wind:");
+  console.dir(sum);
   return sum;
 }
 
 async function getAll(location?: Location) {
   // check localstorage for settings
   const result = await Promise.all([
-    getHopp(),
+    getHopp(location),
     getWind(location),
   ]);
   return result.flat();
