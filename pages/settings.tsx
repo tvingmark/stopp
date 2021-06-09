@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
+import Switch from "../components/switch";
 
 export default function Settings({
   children,
@@ -8,6 +9,15 @@ export default function Settings({
   children?: React.ReactNode;
 }) {
   // use state for buttons
+  // update state
+
+  let config = {
+    bikes: {
+      hopp: false,
+      wind: true,
+    },
+  };
+
   return (
     <Layout home>
       <Head>
@@ -53,9 +63,7 @@ export default function Settings({
             </div>
           </div>
           <div className="flex-grow flex items-center justify-end">
-            <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-gray-200 justify-start">
-              <span className="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
-            </span>
+            <Switch checked={config.bikes?.hopp} />
           </div>
         </div>
         <div className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden">
@@ -73,7 +81,7 @@ export default function Settings({
                 cy="28"
                 r="25"
                 stroke="black"
-                stroke-width="5"
+                strokeWidth="5"
               />
               <circle
                 cx="28"
@@ -91,9 +99,7 @@ export default function Settings({
             </div>
           </div>
           <div className="flex-grow flex items-center justify-end">
-            <span className="border rounded-full border-grey flex items-center cursor-pointer w-12 bg-indigo-500 justify-end">
-              <span className="rounded-full border w-6 h-6 border-indigo-500 shadow-inner bg-white shadow"></span>
-            </span>
+            <Switch checked={config.bikes.wind} />
           </div>
         </div>
       </div>
