@@ -2,21 +2,22 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import Switch from "../components/switch";
+import React, { useContext } from "react";
+import {
+  SettingsContext,
+  toggleBike,
+} from "../components/settings";
 
 export default function Settings({
   children,
 }: {
   children?: React.ReactNode;
 }) {
+  const { state, dispatch } = useContext(SettingsContext);
   // use state for buttons
-  // update state
 
-  let config = {
-    bikes: {
-      hopp: false,
-      wind: true,
-    },
-  };
+  console.dir(state);
+  console.dir(dispatch);
 
   return (
     <Layout home>
@@ -30,7 +31,12 @@ export default function Settings({
         <div className="text-xs font-extrabold mb-2">
           Operators
         </div>
-        <div className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden">
+        <div
+          onClick={() =>
+            dispatch(toggleBike(state.bikes[0].id))
+          }
+          className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden"
+        >
           <div className="flex flex-row px-2 items-center justify-center">
             <svg
               className="mr-2"
@@ -63,10 +69,15 @@ export default function Settings({
             </div>
           </div>
           <div className="flex-grow flex items-center justify-end">
-            <Switch checked={config.bikes?.hopp} />
+            <Switch checked={state.bikes[0].show} />
           </div>
         </div>
-        <div className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden">
+        <div
+          onClick={() =>
+            dispatch(toggleBike(state.bikes[1].id))
+          }
+          className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden cursor-pointer"
+        >
           <div className="flex flex-row px-2 items-center justify-center">
             <svg
               className="mr-2"
@@ -99,7 +110,7 @@ export default function Settings({
             </div>
           </div>
           <div className="flex-grow flex items-center justify-end">
-            <Switch checked={config.bikes.wind} />
+            <Switch checked={state.bikes[1].show} />
           </div>
         </div>
       </div>
