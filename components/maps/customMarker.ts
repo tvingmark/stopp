@@ -1,9 +1,9 @@
 // Custom Bike Markers
 // Variables
 // type and batt and proximity
-import { Bike } from "../../workers/comlink.worker";
+import { BikeStatus } from "../../workers/comlink.worker";
 
-export default function CustomBikeMarker(bike: Bike) {
+export default function CustomBikeMarker(bike: BikeStatus) {
   var el = document.createElement("div");
   el.className = "marker";
   el.style.width = "30px";
