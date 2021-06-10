@@ -15,10 +15,6 @@ export default function Settings({
 }) {
   const { state, dispatch } = useContext(SettingsContext);
   // use state for buttons
-
-  console.dir(state);
-  console.dir(dispatch);
-
   return (
     <Layout home>
       <Head>
@@ -33,7 +29,7 @@ export default function Settings({
         </div>
         <div
           onClick={() =>
-            dispatch(toggleBike(state.bikes[0].id))
+            dispatch(toggleBike(state.bikes[1].id))
           }
           className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden"
         >
@@ -69,12 +65,12 @@ export default function Settings({
             </div>
           </div>
           <div className="flex-grow flex items-center justify-end">
-            <Switch checked={state.bikes[0].show} />
+            <Switch checked={state.bikes[1].show} />
           </div>
         </div>
         <div
           onClick={() =>
-            dispatch(toggleBike(state.bikes[1].id))
+            dispatch(toggleBike(state.bikes[0].id))
           }
           className="w-full rounded-xl p-2 mb-2 bg-red-100 flex overflow-hidden cursor-pointer"
         >
@@ -110,7 +106,7 @@ export default function Settings({
             </div>
           </div>
           <div className="flex-grow flex items-center justify-end">
-            <Switch checked={state.bikes[1].show} />
+            <Switch checked={state.bikes[0].show} />
           </div>
         </div>
       </div>

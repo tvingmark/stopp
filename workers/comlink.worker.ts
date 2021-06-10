@@ -7,6 +7,7 @@ import {
   FilterSize,
 } from "../lib/mapUtils";
 import { getAllPostIds } from "../lib/posts";
+import { Bike } from "../components/settings";
 
 export interface WorkerApi {
   getHopp: typeof getHopp;
@@ -14,7 +15,7 @@ export interface WorkerApi {
   getAll: typeof getAll;
 }
 
-export interface Bike {
+export interface BikeStatus {
   lat: number;
   lon: number;
   batt: number;
@@ -55,7 +56,7 @@ async function getHopp(location: Location) {
       bike.hopp_battery_level > config.BATTERY_LEVEL &&
       inside([bike.lon, bike.lat], polygon)
     ) {
-      const stoppBike: Bike = {
+      const stoppBike: BikeStatus = {
         batt: bike.hopp_battery_level,
         lat: bike.lat,
         lon: bike.lon,
@@ -81,7 +82,7 @@ async function getWind(location: Location) {
   // const res = await fetch(url + "/data/wind.json");
   console.log("Wind credentials");
   console.log(process.env.NEXT_PUBLIC_WIND_URL + paramURL);
-  console.log(process.env.NEXT_PUBLIC_WIND_ID);
+  // console.log(process.env.NEXT_PUBLIC_WIND_ID);
   const res = await fetch(
     process.env.NEXT_PUBLIC_WIND_URL + paramURL,
     {
@@ -103,7 +104,7 @@ async function getWind(location: Location) {
       bike.vol > config.BATTERY_LEVEL &&
       inside([bike.longitude, bike.latitude], polygon)
     ) {
-      const stoppBike: Bike = {
+      const stoppBike: BikeStatus = {
         batt: bike.vol,
         lat: bike.latitude,
         lon: bike.longitude,
@@ -120,12 +121,26 @@ async function getWind(location: Location) {
   return sum;
 }
 
-async function getAll(location?: Location) {
+async function getAll(location: Location, bikes: Bike[]) {
   // check localstorage for settings
-  const result = await Promise.all([
-    getHopp(location),
-    getWind(location),
-  ]);
+  let showBikes = [];
+  console.log("Bike settings");
+  console.dir(bikes);
+  bikes.map((bike) => {
+    if (bike.show) {
+      switch (bike.id) {
+        case "HOPP":
+          showBikes.push(getHopp(location));
+          break;
+        case "WIND":
+          showBikes.push(getWind(location));
+          break;
+        default:
+          console.log("No Operator");
+      }
+    }
+  });
+  const result = await Promise.all(showBikes);
   return result.flat();
 }
 

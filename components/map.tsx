@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // import Here from './here'
 import MapLibre from "./maplibre";
 import Remote from "./remote";
@@ -6,9 +6,10 @@ import Banner from "./banner";
 import WW from "./ww";
 import * as Comlink from "comlink";
 import { WorkerApi } from "../workers/comlink.worker";
-
-import { Bike } from "../workers/comlink.worker";
+import { BikeStatus } from "../workers/comlink.worker";
 import YallaYallaSVG from "./svg/yallayalla";
+
+import { SettingsContext } from "../components/settings";
 
 export interface Location {
   lat: number;
@@ -22,8 +23,9 @@ export default function Map({
   children: React.ReactNode;
   home?: boolean;
 }) {
-  let emptyStoppBikes: Array<Bike> = [];
+  let emptyStoppBikes: Array<BikeStatus> = [];
 
+  const { state } = useContext(SettingsContext);
   const [userLocation, setUserLocation] =
     React.useState<Location>({
       lat: 64.1448,
@@ -92,7 +94,8 @@ export default function Map({
     console.log("HOPP COMLINK");
     const result =
       await comlinkWorkerApiRef.current?.getAll(
-        userLocation
+        userLocation,
+        state.bikes
       );
     setHoppMarkers(result);
   };
