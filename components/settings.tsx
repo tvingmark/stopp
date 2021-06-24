@@ -21,7 +21,7 @@ export const initialSettingsState: SettingsState = {
   fetching: false,
   bikes: [
     { id: "WIND", show: true },
-    { id: "HOPP", show: false },
+    { id: "HOPP", show: true },
   ],
 };
 
