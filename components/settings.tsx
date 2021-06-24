@@ -79,7 +79,7 @@ export const initialSettingsState = (): SettingsState => {
       { id: "HOPP", show: true },
     ],
   };
-};
+}
 
 interface YallaYallaDB extends DBSchema {
   settings: {
