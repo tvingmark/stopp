@@ -4,16 +4,11 @@ import Layout, { siteTitle } from '../components/layout'
 import Map from '../components/map'
 
 
-export default function Home({
-  allPostsData
-}: {
-  allPostsData: {
-    date: string
-    title: string
-    id: string
-  }[]
-}) {
+export default function Home() {
     const [isLoading, setLoading] = useState<boolean>(false);
+    
+
+    
     useEffect(() => {
       let timer = setTimeout(() => setLoading(true), 1 * 300);
 
@@ -21,7 +16,7 @@ export default function Home({
       // when component unmount like in willComponentUnmount
       // and show will not change to true
       return () => {
-        clearTimeout(timer);
+        clearTimeout(timer); 
       };
     }, []);
   if(!isLoading){
@@ -34,7 +29,7 @@ export default function Home({
       )
   }
   // This is the Coordinator. Home of data. Do you want map or list ?.
-  // Create three rectangles around your location that you define according to distance to your home.
+  // Create three rectangles around your location that you define your searching area according to distance to your home.
   return (
     <Layout home>
       <Head>

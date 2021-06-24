@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
-import maplibregl from "maplibre-gl";
+import maplibregl, { Marker } from "maplibre-gl";
 import MapContainer from "./mapContainer";
-import { Bike } from "../workers/comlink.worker";
+import { BikeStatus } from "../workers/comlink.worker";
 import {
   filterByArea,
   FilterConfig,
@@ -26,7 +26,7 @@ export default function MapLibre({
 }: {
   children?: React.ReactNode;
   home: location;
-  hoppMarkers: Array<Bike>;
+  hoppMarkers: Array<BikeStatus>;
 }) {
   const mapContainer = useRef();
   let map = useRef<maplibregl.Map>();
@@ -34,6 +34,7 @@ export default function MapLibre({
   const [lng, setLng] = useState(home.lng);
   const [lat, setLat] = useState(home.lat);
   const [zoom, setZoom] = useState(home.zoom);
+  const allMarkers: Marker[] = []
 
   const config: FilterConfig = {
     RADIUS: FilterSize.MEDIUM,
@@ -44,14 +45,14 @@ export default function MapLibre({
   function addMarkers() {
     console.log("Add Markers");
     console.dir(hoppMarkers);
-    hoppMarkers.map((bike) => {
+    hoppMarkers.map((BikeStatus) => {
       // const markerRef = React.useRef<HTMLDivElement>();
       // const customMarker = <CustomMarker type={"hopp"} />;
 
       const el = document.createElement("div");
 
       const marker = new maplibregl.Marker(el)
-        .setLngLat([bike.lon, home.lat])
+        .setLngLat([BikeStatus.lon, home.lat])
         .addTo(map.current);
     });
   }
@@ -66,22 +67,29 @@ export default function MapLibre({
         zoom: zoom,
       });
     } else {
+
+      //remove all markers
+      console.dir(document.getElementsByClassName("marker"))
+      const markers = document.getElementsByClassName("marker")
+      Array.from(markers).forEach((marker) => {
+       marker.remove()
+    });
       const el = HomeMarker();
       const marker = new maplibregl.Marker(el)
         .setLngLat([home.lng, home.lat])
         .addTo(map.current);
+      
       map.current.flyTo({
         center: [home.lng, home.lat],
       });
-      hoppMarkers.map((bike) => {
+      hoppMarkers.map((BikeStatus) => {
         // const markerRef = React.useRef<HTMLDivElement>();
         // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
-        const el = CustomMarker(bike);
+        const el = CustomMarker(BikeStatus);
         const marker = new maplibregl.Marker(el)
-          .setLngLat([bike.lon, bike.lat])
+          .setLngLat([BikeStatus.lon, BikeStatus.lat])
           .addTo(map.current);
       });
-
       const polygon = filterByArea(
         { lat: home.lat, lon: home.lng },
         config
@@ -100,27 +108,30 @@ export default function MapLibre({
           },
         });
       } else {
-        map.current.addSource("rvk", {
-          type: "geojson",
-          data: {
-            properties: [],
-            type: "Feature",
-            geometry: {
-              type: "Polygon",
-              coordinates: [polygon],
+        console.log("NO PROBLEM");
+        if (map.current.isStyleLoaded()) {
+          map.current.addSource("rvk", {
+            type: "geojson",
+            data: {
+              properties: [],
+              type: "Feature",
+              geometry: {
+                type: "Polygon",
+                coordinates: [polygon],
+              },
             },
-          },
-        });
-        map.current.addLayer({
-          id: "maine",
-          type: "fill",
-          source: "rvk",
-          layout: {},
-          paint: {
-            "fill-color": "rgba(102, 112, 204, 0.1)",
-            "fill-outline-color": "#6670cc",
-          },
-        });
+          });
+          map.current.addLayer({
+            id: "maine",
+            type: "fill",
+            source: "rvk",
+            layout: {},
+            paint: {
+              "fill-color": "rgba(102, 112, 204, 0.1)",
+              "fill-outline-color": "#6670cc",
+            },
+          });
+        }
       }
     }
   }, [hoppMarkers, home]);

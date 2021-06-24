@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // import Here from './here'
 import MapLibre from "./maplibre";
 import Remote from "./remote";
@@ -6,9 +6,10 @@ import Banner from "./banner";
 import WW from "./ww";
 import * as Comlink from "comlink";
 import { WorkerApi } from "../workers/comlink.worker";
-
-import { Bike } from "../workers/comlink.worker";
+import { BikeStatus } from "../workers/comlink.worker";
 import YallaYallaSVG from "./svg/yallayalla";
+
+import { SettingsContext } from "../components/settings";
 
 export interface Location {
   lat: number;
@@ -22,8 +23,9 @@ export default function Map({
   children: React.ReactNode;
   home?: boolean;
 }) {
-  let emptyStoppBikes: Array<Bike> = [];
+  let emptyStoppBikes: Array<BikeStatus> = [];
 
+  const { state } = useContext(SettingsContext);
   const [userLocation, setUserLocation] =
     React.useState<Location>({
       lat: 64.1448,
@@ -36,8 +38,7 @@ export default function Map({
     React.useRef<Comlink.Remote<WorkerApi>>();
 
   function updateLocation(pos) {
-    console.log("Updating location: ");
-    console.dir(pos);
+    console.log("Got location");
     setUserLocation({
       lat: pos.coords.latitude,
       lon: pos.coords.longitude,
@@ -65,6 +66,13 @@ export default function Map({
         break;
     }
   }
+ 
+  React.useEffect(() => {
+    if(userLocation.lat != 64.1448) {
+      updateHopp();
+    }
+  }, [userLocation])
+
 
   React.useEffect(() => {
     comlinkWorkerRef.current = new Worker(
@@ -92,7 +100,8 @@ export default function Map({
     console.log("HOPP COMLINK");
     const result =
       await comlinkWorkerApiRef.current?.getAll(
-        userLocation
+        userLocation,
+        state
       );
     setHoppMarkers(result);
   };

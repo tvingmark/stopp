@@ -1,9 +1,9 @@
 // Custom Bike Markers
 // Variables
 // type and batt and proximity
-import { Bike } from "../../workers/comlink.worker";
+import { BikeStatus } from "../../workers/comlink.worker";
 
-export default function CustomBikeMarker(bike: Bike) {
+export default function CustomBikeMarker(bike: BikeStatus) {
   var el = document.createElement("div");
   el.className = "marker";
   el.style.width = "30px";
@@ -25,13 +25,13 @@ export default function CustomBikeMarker(bike: Bike) {
 export function HomeMarker() {
   var el = document.createElement("div");
   el.className =
-    "marker rounded-full bg-white mx-1 z-50 flex justify-center items-center";
-  el.style.width = "30px";
-  el.style.height = "30px";
+    "marker bg-blue-100 bg-opacity-25 rounded-full bg-transparent mx-1 z-50 flex justify-center items-center";
+  el.style.width = "18px";
+  el.style.height = "18px";
   el.innerHTML = `
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-  <path d="M0 0h24v24H0z" fill="none"/>
-  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+  <svg width="30" height="30" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+  <circle cx="28" cy="28" r="25" stroke="white" stroke-width="5"/
+  <circle cx="28" cy="28" r="20" fill="#4285F4"/>
   </svg>
   `;
   return el;
