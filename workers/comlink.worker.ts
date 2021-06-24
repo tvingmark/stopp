@@ -7,7 +7,7 @@ import {
   FilterSize,
 } from "../lib/mapUtils";
 import { getAllPostIds } from "../lib/posts";
-import { Bike } from "../components/settings";
+import { Bike, SettingsState } from "../components/settings";
 
 export interface WorkerApi {
   getHopp: typeof getHopp;
@@ -121,12 +121,12 @@ async function getWind(location: Location) {
   return sum;
 }
 
-async function getAll(location: Location, bikes: Bike[]) {
+async function getAll(location: Location, settings: SettingsState) {
   // check localstorage for settings
   let showBikes = [];
   console.log("Bike settings");
-  console.dir(bikes);
-  bikes.map((bike) => {
+  console.dir(settings.bikes);
+  settings.bikes.map((bike) => {
     if (bike.show) {
       switch (bike.id) {
         case "HOPP":
@@ -142,6 +142,41 @@ async function getAll(location: Location, bikes: Bike[]) {
   });
   const result = await Promise.all(showBikes);
   return result.flat();
+}
+
+// deviceNumber: 36
+// gpsFix: 2
+// gpsTime: "210622114546"
+// heading: 100.55
+// lastStop: 90000727
+// lat: 64.0981381333333
+// lon: -21.8232623333333
+// nextStop: 10000955
+// pingCode: 6
+// route: "2-A"
+// routeNumber: "2"
+// speed: 35.72
+
+
+
+interface Bus {
+  routeNumber: Number,
+  route: String,
+  location: Location,
+  heading: Number,
+  gpsTime: Number,
+  lastStop: Number,
+  nextStop: Number,
+  speed: Number  
+}
+
+
+async function getBus(buses: Bus[]) {
+  
+  const result: Bus[] = []
+
+
+  return result
 }
 
 Comlink.expose(workerApi);

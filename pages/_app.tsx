@@ -6,13 +6,16 @@ import {
 } from "../components/settings";
 import "../styles/global.css";
 import "tailwindcss/tailwind.css";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 function App({ Component, pageProps }: AppProps) {
+  const initialState = initialSettingsState();
+  console.log("Update");
   const [state, dispatch] = useReducer(
     settingsReducer,
-    initialSettingsState
+    initialState
   );
+
   return (
     <SettingsContext.Provider value={{ state, dispatch }}>
       <Component {...pageProps} />

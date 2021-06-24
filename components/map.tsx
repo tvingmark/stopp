@@ -38,8 +38,7 @@ export default function Map({
     React.useRef<Comlink.Remote<WorkerApi>>();
 
   function updateLocation(pos) {
-    console.log("Updating location: ");
-    console.dir(pos);
+    console.log("Got location");
     setUserLocation({
       lat: pos.coords.latitude,
       lon: pos.coords.longitude,
@@ -67,6 +66,13 @@ export default function Map({
         break;
     }
   }
+ 
+  React.useEffect(() => {
+    if(userLocation.lat != 64.1448) {
+      updateHopp();
+    }
+  }, [userLocation])
+
 
   React.useEffect(() => {
     comlinkWorkerRef.current = new Worker(
@@ -95,7 +101,7 @@ export default function Map({
     const result =
       await comlinkWorkerApiRef.current?.getAll(
         userLocation,
-        state.bikes
+        state
       );
     setHoppMarkers(result);
   };

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
-import maplibregl from "maplibre-gl";
+import maplibregl, { Marker } from "maplibre-gl";
 import MapContainer from "./mapContainer";
 import { BikeStatus } from "../workers/comlink.worker";
 import {
@@ -34,6 +34,7 @@ export default function MapLibre({
   const [lng, setLng] = useState(home.lng);
   const [lat, setLat] = useState(home.lat);
   const [zoom, setZoom] = useState(home.zoom);
+  const allMarkers: Marker[] = []
 
   const config: FilterConfig = {
     RADIUS: FilterSize.MEDIUM,
@@ -66,10 +67,18 @@ export default function MapLibre({
         zoom: zoom,
       });
     } else {
+
+      //remove all markers
+      console.dir(document.getElementsByClassName("marker"))
+      const markers = document.getElementsByClassName("marker")
+      Array.from(markers).forEach((marker) => {
+       marker.remove()
+    });
       const el = HomeMarker();
       const marker = new maplibregl.Marker(el)
         .setLngLat([home.lng, home.lat])
         .addTo(map.current);
+      
       map.current.flyTo({
         center: [home.lng, home.lat],
       });

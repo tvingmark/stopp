@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import Switch from "../components/switch";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   SettingsContext,
   toggleBike,
@@ -14,6 +14,9 @@ export default function Settings({
   children?: React.ReactNode;
 }) {
   const { state, dispatch } = useContext(SettingsContext);
+  console.log("Settings: ");
+  console.dir(state);
+
   // use state for buttons
   return (
     <Layout home>
