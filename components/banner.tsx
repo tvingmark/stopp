@@ -42,10 +42,14 @@ export default function Banner({
   getHopp: () => void;
   children?: React.ReactNode;
 }) {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
   const [clock, setClock] = React.useState({
-    h: "00",
-    m: "00",
-    s: "00",
+    h: ("0" + h).substr(-2),
+    m: ("0" + m).substr(-2),
+    s: ("0" + s).substr(-2),
   });
   useEffect(() => {
     setTimeout(() => {
