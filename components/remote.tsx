@@ -71,7 +71,7 @@ export default function Remote({
         <Button>
           <ScooterSVG />
         </Button>
-        <Button className="opacity-50" handleClick={getHopp}>
+        <Button handleClick={getHopp}>
           <BusSVG />
         </Button>
       </div>
