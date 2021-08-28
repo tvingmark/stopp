@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
     return (
       <div
         onClick={handleClick}
-        className="cursor-pointer hover:bg-green-100 flex justify-center items-center h-10 w-10 rounded-full bg-green-100 mx-1"
+        className="cursor-pointer hover:bg-green-100 border-blue-500 border-4 flex justify-center items-center h-10 w-10 rounded-full bg-white mx-1"
       >
         {children}
       </div>
