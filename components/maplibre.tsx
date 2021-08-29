@@ -97,6 +97,7 @@ export default function MapLibre({
         // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
         console.log("Bus:", bus.lon)
         const el = CustomBusMarker(bus);
+        console.dir(el)
         const marker = new maplibregl.Marker(el)
           .setLngLat([bus.lon, bus.lat])
           .addTo(map.current);
