@@ -5,7 +5,7 @@ import Remote from "./remote";
 import Banner from "./banner";
 import WW from "./ww";
 import * as Comlink from "comlink";
-import { WorkerApi } from "../workers/comlink.worker";
+import { BusStatus, WorkerApi } from "../workers/comlink.worker";
 import { BikeStatus } from "../workers/comlink.worker";
 import YallaYallaSVG from "./svg/yallayalla";
 
@@ -24,6 +24,7 @@ export default function Map({
   home?: boolean;
 }) {
   let emptyStoppBikes: Array<BikeStatus> = [];
+  let emptyBus: Array<BusStatus> = [];
 
   const { state } = useContext(SettingsContext);
   const [userLocation, setUserLocation] =
@@ -33,6 +34,9 @@ export default function Map({
     });
   const [hoppMarkers, setHoppMarkers] =
     React.useState(emptyStoppBikes);
+    const [busMarkers, setBusMarkers] =
+    React.useState(emptyBus);
+  const [buses, setBuses] =  React.useState([6,11,15])
   const comlinkWorkerRef = React.useRef<Worker>();
   const comlinkWorkerApiRef =
     React.useRef<Comlink.Remote<WorkerApi>>();
@@ -96,6 +100,20 @@ export default function Map({
     };
   }, []);
 
+  React.useEffect(() => {
+    if(buses.length === 0) return
+    const id = setInterval(() => (
+        updateBus()
+    ), 6000);
+    return () => clearInterval(id);  
+  }, [buses]);
+
+
+  const updateBus = async () => {
+    console.log("Get Buses Comlink");
+    const result = await comlinkWorkerApiRef.current?.getBus(buses)
+    setBusMarkers(result);
+  }
   const updateHopp = async () => {
     console.log("HOPP COMLINK");
     const result =
@@ -129,10 +147,10 @@ export default function Map({
         <Banner getHopp={updateHopp} />
       </div>
       <div className="relative w-full h-52 sm:h-64">
-        <MapLibre home={myHome} hoppMarkers={hoppMarkers} />
+        <MapLibre home={myHome} hoppMarkers={hoppMarkers} busMarkers={busMarkers} />
       </div>
       <div className="my-3">
-        <Remote getHopp={updateHopp} />
+        <Remote getHopp={updateBus} />
       </div>
       <div className="sm:h-32"></div>
     </>

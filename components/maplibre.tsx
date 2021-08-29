@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
 import maplibregl, { Marker } from "maplibre-gl";
 import MapContainer from "./mapContainer";
-import { BikeStatus } from "../workers/comlink.worker";
+import { BikeStatus, BusStatus } from "../workers/comlink.worker";
 import {
   filterByArea,
   FilterConfig,
@@ -11,6 +11,7 @@ import {
 
 import CustomMarker, {
   HomeMarker,
+  CustomBusMarker
 } from "./maps/customMarker";
 
 interface location {
@@ -23,10 +24,12 @@ export default function MapLibre({
   children,
   home,
   hoppMarkers,
+  busMarkers,
 }: {
   children?: React.ReactNode;
   home: location;
   hoppMarkers: Array<BikeStatus>;
+  busMarkers: Array<BusStatus>
 }) {
   const mapContainer = useRef();
   let map = useRef<maplibregl.Map>();
@@ -56,7 +59,6 @@ export default function MapLibre({
         .addTo(map.current);
     });
   }
-
   useEffect(() => {
     if (!map.current?.loaded) {
       map.current = new maplibregl.Map({
@@ -73,7 +75,7 @@ export default function MapLibre({
       const markers = document.getElementsByClassName("marker")
       Array.from(markers).forEach((marker) => {
        marker.remove()
-    });
+      });
       const el = HomeMarker();
       const marker = new maplibregl.Marker(el)
         .setLngLat([home.lng, home.lat])
@@ -90,6 +92,15 @@ export default function MapLibre({
           .setLngLat([BikeStatus.lon, BikeStatus.lat])
           .addTo(map.current);
       });
+      busMarkers.map((bus) => {
+        // const markerRef = React.useRef<HTMLDivElement>();
+        // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
+        console.log("Bus:", bus.lon)
+        const el = CustomBusMarker(bus);
+        const marker = new maplibregl.Marker(el)
+          .setLngLat([bus.lon, bus.lat])
+          .addTo(map.current);
+      });            
       const polygon = filterByArea(
         { lat: home.lat, lon: home.lng },
         config
@@ -134,7 +145,7 @@ export default function MapLibre({
         }
       }
     }
-  }, [hoppMarkers, home]);
+  }, [busMarkers, hoppMarkers, home]);
   return (
     <>
       <MapContainer ref={mapContainer} />

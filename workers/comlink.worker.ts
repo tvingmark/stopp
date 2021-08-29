@@ -12,6 +12,7 @@ import { Bike, SettingsState } from "../components/settings";
 export interface WorkerApi {
   getHopp: typeof getHopp;
   getWind: typeof getWind;
+  getBus: typeof getBus;
   getAll: typeof getAll;
 }
 
@@ -23,9 +24,22 @@ export interface BikeStatus {
   vendor: "hopp" | "wind";
 }
 
+export interface BusStatus {
+  routeNumber: number,
+  route: String,
+  lon: number,
+  lat: number,
+  heading: number,
+  gpsTime: number,
+  lastStop: number,
+  nextStop: number,
+  speed: number  
+}
+
 const workerApi: WorkerApi = {
   getHopp,
   getWind,
+  getBus,
   getAll,
 };
 
@@ -159,24 +173,15 @@ async function getAll(location: Location, settings: SettingsState) {
 
 
 
-interface Bus {
-  routeNumber: Number,
-  route: String,
-  location: Location,
-  heading: Number,
-  gpsTime: Number,
-  lastStop: Number,
-  nextStop: Number,
-  speed: Number  
-}
-
-
-async function getBus(buses: Bus[]) {
-  
-  const result: Bus[] = []
-
-
-  return result
+async function getBus(route: number[]) {
+  // https://app.straeto.is/pele/api/v1/positions/filter/6,11
+  const baseURL = "https://app.straeto.is/pele/api/v1/positions/filter/"
+  const param = route.join()
+  const res = await fetch(baseURL+param);
+  const json = await res.json();
+  console.dir(json.positions)
+  console.log("URL: " + baseURL+param)
+  return json.positions
 }
 
 Comlink.expose(workerApi);
