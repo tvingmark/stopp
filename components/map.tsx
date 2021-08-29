@@ -36,7 +36,7 @@ export default function Map({
     React.useState(emptyStoppBikes);
     const [busMarkers, setBusMarkers] =
     React.useState(emptyBus);
-  const [buses, setBuses] =  React.useState([6,11,15])
+  const [buses, setBuses] =  React.useState([6,11,13,15])
   const comlinkWorkerRef = React.useRef<Worker>();
   const comlinkWorkerApiRef =
     React.useRef<Comlink.Remote<WorkerApi>>();
