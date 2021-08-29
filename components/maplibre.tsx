@@ -81,9 +81,9 @@ export default function MapLibre({
         .setLngLat([home.lng, home.lat])
         .addTo(map.current);
       
-      map.current.flyTo({
-        center: [home.lng, home.lat],
-      });
+      // map.current.flyTo({
+      //   center: [home.lng, home.lat],
+      // });
       hoppMarkers.map((BikeStatus) => {
         // const markerRef = React.useRef<HTMLDivElement>();
         // const customMarker = <CustomMarker ref={markerRef} type={"hopp"} />;
