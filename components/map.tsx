@@ -99,11 +99,17 @@ export default function Map({
       comlinkWorkerRef.current?.terminate();
     };
   }, []);
+  
+  React.useEffect(() => {
+    // run once
+    updateBus()
+  }, []);
 
   React.useEffect(() => {
     if(buses.length === 0) return
     const id = setInterval(() => (
         updateBus()
+        // console.log("Update bus")
     ), 6000);
     return () => clearInterval(id);  
   }, [buses]);
